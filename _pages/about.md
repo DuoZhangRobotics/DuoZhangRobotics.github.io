@@ -23,3 +23,6 @@ My name is Duo Zhang (张多) and I am a second-year Ph.D. student and the <a hr
 Before this, I got my M.S. degree at the <a href="https://cims.nyu.edu/dynamic/">Courant Institute of Mathematical Sciences</a> of New York University. I worked with <a href="https://cims.nyu.edu/gcl/daniele.html">Prof. Daniele Panozzo</a> from the <a href="https://cims.nyu.edu/gcl/index.html">Geometry Computing Lab</a> and <a href="https://www.lerrelpinto.com/">Prof. Lerrel Pinto</a> from <a href="https://wp.nyu.edu/cilvr/">CILVR group</a> on Deep Reinforcement Learning, Physical Simulation and Robotics.
 	
 Prior to my master's degree, I got my Bachelor degree of Engineering from the <a href="http://www.cs.en.qd.sdu.edu.cn/">Computer Science and Technology department at Shandong University</a>. At that time, I was a research assistant in <a href="http://irc.cs.sdu.edu.cn/"> Interdisciplinary Research Center</a> working with <a href="http://irc.cs.sdu.edu.cn/~chtu/index.html">Prof. Changhe Tu</a>, <a href="https://scholar.google.com/citations?user=0KfKHOsAAAAJ&hl=en">Dr. Zherong Pan </a> and <a href="https://gaoxifeng.github.io/">Dr. Xifeng Gao</a> Grasp Planning Problems.
+
+<h2>Research Intersets</h2>
+Manipulation, Motion Planning, Grasp Planning, Deep Reinforcement Learning, Physical Simulation
