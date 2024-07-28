@@ -1,6 +1,6 @@
 ---
 layout: cv
-permalink: /cv/
+permalink: /assets/pdf/Duo_Zhang_CV.pdf
 title: cv
 nav: true
 nav_order: 5
