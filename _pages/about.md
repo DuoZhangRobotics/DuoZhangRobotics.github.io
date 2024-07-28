@@ -6,7 +6,7 @@ subtitle:
 
 profile:
   align: right
-  image: duo.JPG
+  image: duo.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
     <p>332</p>
@@ -24,5 +24,5 @@ Before this, I got my M.S. degree at the <a href="https://cims.nyu.edu/dynamic/"
 	
 Prior to my master's degree, I got my Bachelor degree of Engineering from the <a href="http://www.cs.en.qd.sdu.edu.cn/">Computer Science and Technology department at Shandong University</a>. At that time, I was a research assistant in <a href="http://irc.cs.sdu.edu.cn/"> Interdisciplinary Research Center</a> working with <a href="http://irc.cs.sdu.edu.cn/~chtu/index.html">Prof. Changhe Tu</a>, <a href="https://scholar.google.com/citations?user=0KfKHOsAAAAJ&hl=en">Dr. Zherong Pan </a> and <a href="https://gaoxifeng.github.io/">Dr. Xifeng Gao</a> Grasp Planning Problems.
 
-<h2>Research Intersets</h2>
+<h3>Research Intersets</h3>
 Manipulation, Motion Planning, Grasp Planning, Deep Reinforcement Learning, Physical Simulation
