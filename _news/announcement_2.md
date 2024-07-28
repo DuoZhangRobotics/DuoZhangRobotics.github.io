@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-My paper 
+My paper <a href="https://ieeexplore.ieee.org/abstract/document/10505800">Provably Feasible Semi-Infinite Program Under Collision Constraints via Subdivision</a> got accepted to IEEE TR-O.
