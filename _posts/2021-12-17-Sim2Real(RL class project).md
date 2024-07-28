@@ -1,8 +1,8 @@
 ---
 title: "Transfering Simulated Learning to Real Robots"
 layout: post
-mathjax: true
 date: 2021-12-17 08:31:19 +0700
+featured: true 
 ---
 
 
@@ -45,7 +45,7 @@ $$ L_c = ( Q(s_t,a_t) - r_t - \gamma Q_T(s_{t+1},\pi(s_{t+1}) )  )^2 $$
 
 Here the $$ Q_T $$ is predicted using the Target networks (Actor and Critic) which are updated using Polyak averaging of the weights of the corresponding current Actor and Critic networks.
 
-<center><img src="/assets/files/sim2real.png" width="75%"></center>
+<center><img src="/assets/img/sim2real.png" width="75%" data-zoomable></center>
 
 # Adapting to the Real World
 Here, we discuss the optimizations we made during training and deployment time to bridge the sim2real gap.
@@ -55,7 +55,7 @@ Sometimes it is hard to gather Depth perception from plain images which leads to
 
 Here's the juxtaposition of the depth information yielded by the simulation and the real world-
 
-<center><img src="/assets/files/depth.png" width="596"></center>
+<center><img src="/assets/img/depth.png" width="596" data-zoomable></center>
 <center> Depth image from simulation </center>
 
 
@@ -65,7 +65,7 @@ Looking at these results we decided move away from depth information altogether.
 
 Fortunately we noticed that using a side camera angle allowed a more reasonable perception of depth. This is probably because the model has parameters such as the extension of the arm to latch onto to better estimate depth.
 
-<center><img src="/assets/files/still_image.png" width="596"></center>
+<center><img src="/assets/img/still_image.png" width="596" data-zoomable></center>
 <center> The side view of the XArm </center>
 
 
@@ -105,7 +105,7 @@ During the training time, with the boost of pre-trained feature extractor, the p
 # Training time performance
 
 In our experiments, we can show that the performance of the model (our best model + depth information) actually does better than our best model. Sadly the chaotic depth image from RealSense2 camera ruined everything. We also tried to use AlexNet as the feature extractor which is shown in the dark green curve. From this we know that the pre-trained AlexNet can only do better at the beginning of the training, and in later stages, its performance is climbing slowly and it takes more time to train if we want to achieve similar performance with a 3-layer CNN feature extractor.
-<center><img src="/assets/files/bottleneck_depth_vs_non_depth.png" width="596"></center>
+<center><img src="/assets/img/bottleneck_depth_vs_non_depth.png" width="596" data-zoomable></center>
 <center> Training time performance of different models </center>
 
 # Future works
