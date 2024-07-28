@@ -18,7 +18,7 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true # includes social icons at the bottom of the page
 ---
 
-My name is Duo Zhang (张多) and I am a second-year Ph.D. student and the <a href="https://www.cs.rutgers.edu">Computer Science Department of Rutgers University</a>. Here, I am advised by Prof. Jingjin Yu at the <a href="https://arc-l.github.io">Algorithmic Robotics and Control Lab(ARC-L)</a>.
+My name is Duo Zhang (张多) and I am a second-year Ph.D. student at the <a href="https://www.cs.rutgers.edu">Computer Science Department of Rutgers University</a>. Here, I am advised by Prof. Jingjin Yu in the <a href="https://arc-l.github.io">Algorithmic Robotics and Control Lab(ARC-L)</a>.
 	
 Before this, I got my M.S. degree at the <a href="https://cims.nyu.edu/dynamic/">Courant Institute of Mathematical Sciences</a> of New York University. I worked with <a href="https://cims.nyu.edu/gcl/daniele.html">Prof. Daniele Panozzo</a> from the <a href="https://cims.nyu.edu/gcl/index.html">Geometry Computing Lab</a> and <a href="https://www.lerrelpinto.com/">Prof. Lerrel Pinto</a> from <a href="https://wp.nyu.edu/cilvr/">CILVR group</a> on Deep Reinforcement Learning, Physical Simulation and Robotics.
 	
