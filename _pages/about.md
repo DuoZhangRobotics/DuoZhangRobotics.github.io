@@ -9,8 +9,8 @@ profile:
   image: duo.jpg
   image_circular: false # crops the image to make it circular
   more_info: >
-    <p>332</p>
     <p>1 Spring Street</p>
+    <p>Office #332</p>
     <p>New Brunswick, NJ 08901</p>
 
 news: true # includes a list of news items
