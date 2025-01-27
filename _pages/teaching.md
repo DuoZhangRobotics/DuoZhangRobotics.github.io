@@ -11,3 +11,5 @@ nav_order: 6
 Systems Programming [Fall 2023]
 
 Data Management for Data Science [Spring 2024]
+
+Software Methodology [Fall 2024, Spring 2025]
