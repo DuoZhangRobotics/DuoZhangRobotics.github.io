@@ -4,9 +4,9 @@ on:
   push:
     branches:
       - master
-      - main
     paths:
       - "assets/**"
+      - "projects/**"
       - "_sass/**"
       - "_scripts/**"
       - "**.bib"
@@ -36,6 +36,7 @@ on:
       - main
     paths:
       - "assets/**"
+      - "projects/**"
       - "_sass/**"
       - "_scripts/**"
       - "**.bib"
