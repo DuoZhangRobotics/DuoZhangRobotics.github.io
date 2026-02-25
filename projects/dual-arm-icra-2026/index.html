@@ -20,11 +20,11 @@
   <meta property="og:title" content="High-Performance Dual-Arm Task and Motion Planning for Tabletop Rearrangement">
   <meta property="og:description" content="Project page for our ICRA 2026 paper on high-performance dual-arm task and motion planning for tabletop rearrangement.">
   <meta property="og:url" content="https://duozhangrobotics.github.io/projects/dual-arm-icra-2026/">
-  <meta property="og:image" content="https://duozhangrobotics.github.io/projects/dual-arm-icra-2026/static/images/carousel1.jpg">
+  <meta property="og:image" content="https://duozhangrobotics.github.io/projects/dual-arm-icra-2026/static/images/system_overview.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="High-Performance Dual-Arm Task and Motion Planning for Tabletop Rearrangement - Research Preview">
-  <meta property="article:published_time" content="2026-01-01T00:00:00.000Z">
+  <meta property="article:published_time" content="2026-01-31:00:00.000Z">
   <meta property="article:author" content="Duo Zhang">
   <meta property="article:section" content="Research">
   <meta property="article:tag" content="Robotics">
@@ -37,7 +37,7 @@
   <meta name="twitter:creator" content="@AUTHOR_TWITTER_HANDLE">
   <meta name="twitter:title" content="High-Performance Dual-Arm Task and Motion Planning for Tabletop Rearrangement">
   <meta name="twitter:description" content="Project page for our ICRA 2026 paper on high-performance dual-arm task and motion planning for tabletop rearrangement.">
-  <meta name="twitter:image" content="https://duozhangrobotics.github.io/projects/dual-arm-icra-2026/static/images/carousel1.jpg">
+  <meta name="twitter:image" content="https://duozhangrobotics.github.io/projects/dual-arm-icra-2026/static/images/system_overview.png">
   <meta name="twitter:image:alt" content="High-Performance Dual-Arm Task and Motion Planning for Tabletop Rearrangement - Research Preview">
 
   <!-- Academic/Research Specific -->
@@ -77,14 +77,14 @@
   <!-- Non-critical CSS - Load asynchronously -->
   <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   
   <!-- Fallback for browsers that don't support preload -->
   <noscript>
     <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
     <link rel="stylesheet" href="static/css/bulma-slider.min.css">
-    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   </noscript>
   
@@ -94,7 +94,6 @@
   <!-- Defer non-critical JavaScript -->
   <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script defer src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
-  <script defer src="static/js/fontawesome.all.min.js"></script>
   <script defer src="static/js/bulma-carousel.min.js"></script>
   <script defer src="static/js/bulma-slider.min.js"></script>
   <script defer src="static/js/index.js"></script>
@@ -308,23 +307,18 @@
 </section>
 
 
-<!-- Teaser video-->
+<!-- Teaser figure -->
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
-      <!-- TODO: Replace with your teaser video -->
-      <video poster="" id="tree" autoplay controls muted loop height="100%" preload="metadata">
-        <!-- TODO: Add your video file path here -->
-        <source src="static/videos/banner_video.mp4" type="video/mp4">
-      </video>
-      <!-- TODO: Replace with your video description -->
+      <img src="static/images/system_overview.png" alt="System overview of the dual-arm task and motion planning framework" class="img-fluid">
       <h2 class="subtitle has-text-centered">
-        Aliquam vitae elit ullamcorper tellus egestas pellentesque. Ut lacus tellus, maximus vel lectus at, placerat pretium mi. Maecenas dignissim tincidunt vestibulum. Sed consequat hendrerit nisl ut maximus. 
+        System overview of our synchronous dual-arm task and motion planning framework for tabletop rearrangement.
       </h2>
     </div>
   </div>
 </section>
-<!-- End teaser video -->
+<!-- End teaser figure -->
 
 <!-- Paper abstract -->
 <section class="section hero is-light">
@@ -344,6 +338,44 @@
 </section>
 <!-- End paper abstract -->
 
+<!-- Video gallery -->
+<section class="hero is-small">
+  <div class="hero-body">
+    <div class="container">
+      <h2 class="title is-3 section-title-centered">Real Robot Demo</h2>
+      <p class="video-gallery-description section-text-centered">
+        The videos show dual-arm rearrangement of ArUco-marker cubes to form <strong>ICRA2026</strong>.
+      </p>
+
+      <div class="video-gallery-section">
+        <h3 class="title is-5 video-gallery-row-title">Front View</h3>
+        <div class="video-gallery-row">
+          <div class="video-gallery-item"><video controls muted loop preload="metadata"><source src="static/videos/videos_front_edited_compressed/1.mp4" type="video/mp4"></video><p class="video-caption">I&rarr;C</p></div>
+          <div class="video-gallery-item"><video controls muted loop preload="metadata"><source src="static/videos/videos_front_edited_compressed/2.mp4" type="video/mp4"></video><p class="video-caption">C&rarr;R</p></div>
+          <div class="video-gallery-item"><video controls muted loop preload="metadata"><source src="static/videos/videos_front_edited_compressed/3.mp4" type="video/mp4"></video><p class="video-caption">R&rarr;A</p></div>
+          <div class="video-gallery-item"><video controls muted loop preload="metadata"><source src="static/videos/videos_front_edited_compressed/4.mp4" type="video/mp4"></video><p class="video-caption">A&rarr;2</p></div>
+          <div class="video-gallery-item"><video controls muted loop preload="metadata"><source src="static/videos/videos_front_edited_compressed/5.mp4" type="video/mp4"></video><p class="video-caption">2&rarr;0</p></div>
+          <div class="video-gallery-item"><video controls muted loop preload="metadata"><source src="static/videos/videos_front_edited_compressed/6.mp4" type="video/mp4"></video><p class="video-caption">0&rarr;2</p></div>
+          <div class="video-gallery-item"><video controls muted loop preload="metadata"><source src="static/videos/videos_front_edited_compressed/7.mp4" type="video/mp4"></video><p class="video-caption">2&rarr;6</p></div>
+        </div>
+      </div>
+
+      <div class="video-gallery-section">
+        <h3 class="title is-5 video-gallery-row-title">Side View</h3>
+        <div class="video-gallery-row">
+          <div class="video-gallery-item"><video controls muted loop preload="metadata"><source src="static/videos/videos_side_edited_compressed/1.mp4" type="video/mp4"></video><p class="video-caption">I&rarr;C</p></div>
+          <div class="video-gallery-item"><video controls muted loop preload="metadata"><source src="static/videos/videos_side_edited_compressed/2.mp4" type="video/mp4"></video><p class="video-caption">C&rarr;R</p></div>
+          <div class="video-gallery-item"><video controls muted loop preload="metadata"><source src="static/videos/videos_side_edited_compressed/3.mp4" type="video/mp4"></video><p class="video-caption">R&rarr;A</p></div>
+          <div class="video-gallery-item"><video controls muted loop preload="metadata"><source src="static/videos/videos_side_edited_compressed/4.mp4" type="video/mp4"></video><p class="video-caption">A&rarr;2</p></div>
+          <div class="video-gallery-item"><video controls muted loop preload="metadata"><source src="static/videos/videos_side_edited_compressed/5.mp4" type="video/mp4"></video><p class="video-caption">2&rarr;0</p></div>
+          <div class="video-gallery-item"><video controls muted loop preload="metadata"><source src="static/videos/videos_side_edited_compressed/6.mp4" type="video/mp4"></video><p class="video-caption">0&rarr;2</p></div>
+          <div class="video-gallery-item"><video controls muted loop preload="metadata"><source src="static/videos/videos_side_edited_compressed/7.mp4" type="video/mp4"></video><p class="video-caption">2&rarr;6</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End video gallery -->
 
 <!-- Image carousel -->
 <!-- <section class="hero is-small">
@@ -388,7 +420,7 @@
   <div class="hero-body">
     <div class="container">
       <!-- Paper video. -->
-      <h2 class="title is-3">Video Presentation</h2>
+      <h2 class="title is-3 section-title-centered">Video Presentation</h2>
       <div class="columns is-centered has-text-centered">
         <div class="column is-four-fifths">
           
@@ -403,32 +435,6 @@
 <!-- End youtube video -->
 
 
-<!-- Video carousel -->
-<!-- <section class="hero is-small">
-  <div class="hero-body">
-    <div class="container">
-      <h2 class="title is-3">Another Carousel</h2>
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-video1">
-          <video poster="" id="video1" controls muted loop height="100%" preload="metadata">
-            <source src="static/videos/carousel1.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video2">
-          <video poster="" id="video2" controls muted loop height="100%" preload="metadata">
-            <source src="static/videos/carousel2.mp4" type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-video3">
-          <video poster="" id="video3" controls muted loop height="100%" preload="metadata">
-            <source src="static/videos/carousel3.mp4" type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> -->
-<!-- End video carousel -->
 
 
 
