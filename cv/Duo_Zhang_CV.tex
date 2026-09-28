@@ -1,0 +1,174 @@
+% Standalone CV: all formatting is included for the built-in LaTeX editor.
+% The original resume.cls is retained beside this file for reference.
+\documentclass[11pt,letterpaper]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=0.65in]{geometry}
+\usepackage{lmodern}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\definecolor{linkblue}{HTML}{184C73}
+\hypersetup{colorlinks=true,urlcolor=linkblue,linkcolor=linkblue,
+  pdftitle={Duo Zhang -- Curriculum Vitae},pdfauthor={Duo Zhang}}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3pt}
+\setlength{\emergencystretch}{2em}
+\titleformat{\section}{\large\bfseries}{}{0pt}{}[\titlerule]
+\titlespacing*{\section}{0pt}{12pt}{6pt}
+\setlist[itemize]{leftmargin=1.25em,topsep=2pt,itemsep=2pt,parsep=0pt}
+\setlist[enumerate]{leftmargin=1.7em,label={[\arabic*]},ref=\arabic*,topsep=3pt,itemsep=5pt,parsep=0pt}
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[L]{\small Duo Zhang \quad | \quad Curriculum Vitae}
+\fancyfoot[R]{\small \thepage}
+\setlength{\footskip}{24pt}
+\newcommand{\entry}[2]{\textbf{#1}\hfill #2\par}
+\newcommand{\project}[2]{\item \textbf{#1}\enspace #2}
+\newcommand{\paperref}[1]{\hyperref[pub:#1]{[\ref*{pub:#1}]}}
+
+\begin{document}
+\begin{center}
+  {\LARGE\bfseries DUO ZHANG}\\[5pt]
+  Ph.D. Candidate in Computer Science, Rutgers University\\[3pt]
+  \href{mailto:duo.zhang@rutgers.edu}{duo.zhang@rutgers.edu}
+  \enspace $\vert$ \enspace (+1) 917-609-7561
+  \enspace $\vert$ \enspace
+  \href{https://duozhangrobotics.github.io/}{Personal Website}\\[2pt]
+  \href{https://github.com/DuoZhangRobotics}{GitHub}
+  \enspace $\vert$ \enspace
+  \href{https://scholar.google.com/citations?user=bmEZlbkAAAAJ}{Google Scholar}
+\end{center}
+
+\section*{Education}
+\entry{Rutgers University}{September 2023--Present}
+Ph.D. Candidate, Computer Science. Advisor: Prof. Jingjin Yu.
+
+\entry{New York University}{January 2021--December 2022}
+M.S., Courant Institute of Mathematical Sciences.
+
+\entry{Shandong University}{September 2016--June 2020}
+B.E., Computer Science (June 2018--June 2020); prior undergraduate study in
+Energy and Power Engineering (September 2016--June 2018).
+\\Selected honor: National Scholarship, Ministry of Education of China.
+
+\section*{Publications and Preprints}
+\textbf{Conference and journal publications}
+\begin{enumerate}
+  \item\label{pub:sdar} \textbf{Duo Zhang}, Junshan Huang, and Jingjin Yu.
+  ``High-Performance Dual-Arm Task and Motion Planning for Tabletop
+  Rearrangement.'' \textit{IEEE International Conference on Robotics and
+  Automation (ICRA)}, 2026.
+  \href{https://arxiv.org/abs/2512.08206}{Paper}.
+
+  \item\label{pub:rvg} \textbf{Duo Zhang}, Zihe Ye, and Jingjin Yu.
+  ``Asymptotically-Optimal Multi-Query Path Planning for a Polygonal Robot.''
+  \textit{IEEE International Conference on Robotics and Automation (ICRA)}, 2025.
+  \href{https://arxiv.org/abs/2409.03920}{Paper}.
+
+  \item\label{pub:sip} \textbf{Duo Zhang}, Chen Liang, Xifeng Gao, Kui Wu, and Zherong Pan.
+  ``Provably Feasible Semi-Infinite Program Under Collision Constraints via
+  Subdivision.'' \textit{IEEE Transactions on Robotics (T-RO)}, 2024.
+  \href{https://ieeexplore.ieee.org/abstract/document/10505800}{Paper}.
+
+  \item\label{pub:grasp} Zherong Pan, \textbf{Duo Zhang}, Changhe Tu, and Xifeng Gao.
+  ``Planning of Power Grasps Using Infinite Program Under Complementary
+  Constraints.'' \textit{IEEE Robotics and Automation Letters (RA-L)},
+  7(1):650--657, 2022.
+  \href{https://doi.org/10.1109/LRA.2021.3130376}{Paper}.
+\end{enumerate}
+
+\textbf{Preprints and manuscripts}
+\begin{enumerate}[resume]
+  \item\label{pub:drvg} \textbf{Duo Zhang}, Hechen Zhang, Junshan Huang, and Jingjin Yu.
+  ``dRVG: Quadtree-Guided, Resolution-Complete Online Motion Planning for
+  Polygonal Robots in Unknown Environments.''
+  \textit{arXiv preprint}, 2026.
+  \href{https://arxiv.org/abs/2609.31412}{arXiv:2609.31412}.
+
+  \item\label{pub:stprrtc} \textbf{Duo Zhang}, Jintong Li, Junshan Huang, and Jingjin Yu.
+  ``ST-pRRTC: Parallel Space-Time RRT-C with Adaptive Goal-Time Forests.''
+  \textit{arXiv preprint}, 2026.
+  \href{https://arxiv.org/abs/2609.30533}{arXiv:2609.30533}.
+
+  % FAVOR: replace the status below and add verified links after public release.
+  \item\label{pub:favor} \textbf{Duo Zhang}, Zhizhuo Zhang, Xiaoli Bai, and Jingjin Yu.
+  ``Efficient B\'ezier Velocity Optimization for Free-Floating Space Manipulators.''
+  \textit{Manuscript}, 2026. FAVOR; arXiv and project links coming soon.
+\end{enumerate}
+
+\newpage
+\section*{Research Experience}
+\entry{Rutgers University, Algorithmic Robotics \& Control Lab}{September 2023--Present}
+Graduate Assistant \enspace $\vert$ \enspace Advisor: Prof. Jingjin Yu
+
+\begin{itemize}
+  \project{Geometric and online motion planning.}{Developed rotation-stacked
+  visibility graphs for multi-query polygonal-robot planning (RVG), then extended
+  the approach to unknown environments through local-roadmap merging and
+  quadtree-guided sensing (dRVG). Evaluated against sampling-based planners and
+  demonstrated online navigation on a microMVP robot.
+  \paperref{rvg}, \paperref{drvg}}
+
+  \project{GPU-accelerated manipulation and space-time planning.}{Developed
+  dependency-driven dual-arm rearrangement planning (SDAR) and adaptive goal-time
+  forests for planning among moving obstacles (ST-pRRTC). Validated the methods
+  on dual UR5e arms and a UR5e operating among Crazyflie quadrotors, respectively.
+  \paperref{sdar}, \paperref{stprrtc}}
+
+  \project{Free-floating space manipulation.}{Developed B\'ezier joint-velocity
+  optimization with analytical recursive sensitivities (FAVOR) for reaching,
+  tracking, and prescribed-time interception under coupled spacecraft--arm motion.
+  Evaluated in simulation with a seven-DoF arm and five spacecraft models.
+  \paperref{favor}}
+\end{itemize}
+
+\entry{Tencent America, Lightspeed \& Quantum Studio}{June 2022--June 2023}
+Research \& Development Intern, Copernicus Research Group \hfill Bellevue, WA
+\begin{itemize}
+  \project{Collision-constrained trajectory optimization.}{Developed a
+  semi-infinite programming solver using conservative motion bounds and adaptive
+  subdivision to maintain collision-free trajectories; evaluated on articulated
+  robot arms and UAVs. \paperref{sip}}
+\end{itemize}
+
+\entry{New York University, Courant Institute}{September 2021--December 2022}
+Research Assistant with Profs. Daniele Panozzo and Lerrel Pinto \hfill New York, NY
+\begin{itemize}
+  \project{Deformable-object manipulation.}{Built OpenAI Gym
+  environments and PolyFEM tutorials for reinforcement
+  learning with deformable objects; set up camera tracking and validated robot
+  experiments, including a silicone-ball slingshot.}
+\end{itemize}
+
+\entry{Shandong University, Interdisciplinary Research Center}{January--December 2020}
+Research Assistant, Prof. Changhe Tu's lab \hfill Qingdao, China
+\begin{itemize}
+  \project{Power grasp planning.}{Worked with Xifeng Gao and Zherong Pan on
+  infinite programming with complementary constraints, kernel-integral relaxation,
+  and fast multipole evaluation for optimization-based grasp planning.
+  \paperref{grasp}}
+\end{itemize}
+
+\entry{University of California, Los Angeles}{July--September 2019}
+Research Assistant, Prof. Sriram Sankararaman's lab \hfill Los Angeles, CA\\
+Cross-disciplinary Scholars in Science and Technology Program
+\begin{itemize}
+  \project{Cell-type-specific gene expression prediction.}{Developed
+  tensor-component-analysis methods for cell-type-specific
+  gene-expression prediction and transcriptome-wide association studies;
+  implemented and published an R package for the project.}
+\end{itemize}
+
+\section*{Teaching Experience}
+\textbf{Teaching Assistant, Rutgers University}
+\begin{itemize}
+  \item Software Methodology \hfill Fall 2024, Spring 2025
+  \item Data Management for Data Science \hfill Spring 2024
+  \item Systems Programming \hfill Fall 2023
+\end{itemize}
+
+\end{document}

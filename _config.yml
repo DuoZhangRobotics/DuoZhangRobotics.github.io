@@ -219,6 +219,8 @@ kramdown:
 # Includes & excludes
 include: ["_pages"]
 exclude:
+  - cv/
+  - Duo_Zhang_CV.zip
   - bin/
   - CONTRIBUTING.md
   - CUSTOMIZE.md
