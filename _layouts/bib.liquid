@@ -36,22 +36,30 @@
           {% endif %}
         {% endif %}
         <figure>
-          <video
-            class="preview z-depth-1 rounded"
-            src="{{ video_path | escape }}"
-            {% if poster_path %}
-              poster="{{ poster_path | escape }}"
-            {% endif %}
-            aria-label="Video teaser for {{ entry.title | strip_html | escape }}"
-            autoplay
-            muted
-            loop
-            playsinline
-            controls
-            preload="metadata"
+          <a
+            class="publication-video-trigger"
+            href="{{ video_path | escape }}"
+            data-video-zoom
+            aria-label="Enlarge video teaser for {{ entry.title | strip_html | escape }}"
           >
-            <a href="{{ video_path | escape }}">Watch the video teaser</a>
-          </video>
+            <video
+              class="preview z-depth-1 rounded"
+              src="{{ video_path | escape }}"
+              {% if poster_path %}
+                poster="{{ poster_path | escape }}"
+              {% endif %}
+              aria-hidden="true"
+              tabindex="-1"
+              autoplay
+              muted
+              loop
+              playsinline
+              preload="metadata"
+            >
+              Watch the video teaser
+            </video>
+            <span class="publication-video-expand" aria-hidden="true"><i class="fa-solid fa-expand"></i></span>
+          </a>
         </figure>
       {% elsif entry.preview %}
         {% if entry.preview contains '://' %}

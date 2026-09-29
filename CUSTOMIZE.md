@@ -97,8 +97,12 @@ preview={dual_arm_v2.png},
 preview_video={/projects/dual-arm-icra-2026/static/videos/videos_front_edited_compressed/1.mp4},
 ```
 
-Video teasers autoplay muted, loop, and play inline on phones. Native video
-controls allow pausing and fullscreen playback. Use short, compressed clips;
+Video teasers autoplay muted, loop, and play inline on phones. Click or tap a
+teaser (or focus it and press Enter) to open a larger player at the current
+playback position. The larger player has native pause, seek, and fullscreen
+controls. Close it with the close button, Escape, or a click outside the player;
+the teaser keeps the playback position and paused/playing state. Without
+JavaScript, the teaser links directly to the video file. Use short, compressed clips;
 `preview_video` needs a direct video file, not a YouTube watch-page URL. The
 existing `video` field remains the separate publication Video button.
 

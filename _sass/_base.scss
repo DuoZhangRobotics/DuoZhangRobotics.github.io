@@ -686,6 +686,36 @@ footer.sticky-bottom {
         height: auto;
       }
 
+      .publication-video-trigger {
+        display: block;
+        position: relative;
+        cursor: zoom-in;
+        border-radius: 0.25rem;
+
+        &:focus-visible {
+          outline: 3px solid var(--global-theme-color);
+          outline-offset: 3px;
+        }
+
+        video {
+          display: block;
+          pointer-events: none;
+        }
+      }
+
+      .publication-video-expand {
+        position: absolute;
+        right: 0.3rem;
+        bottom: 0.3rem;
+        padding: 0.2rem 0.35rem;
+        border-radius: 0.2rem;
+        background: rgba(0, 0, 0, 0.65);
+        color: white;
+        font-size: 0.75rem;
+        line-height: 1;
+        pointer-events: none;
+      }
+
       .abbr {
         margin-bottom: 0.5rem;
 
@@ -1088,6 +1118,72 @@ nav[data-toggle="toc"] {
 .medium-zoom-overlay,
 .medium-zoom-image--opened {
   z-index: 999;
+}
+
+html.publication-video-open {
+  overflow: hidden;
+}
+
+.publication-video-dialog {
+  width: min(1100px, calc(100vw - 2rem));
+  max-width: none;
+  max-height: calc(100vh - 2rem);
+  max-height: calc(100dvh - 2rem);
+  margin: auto;
+  padding: 3rem 1rem 1rem;
+  border: 0;
+  border-radius: 0.5rem;
+  background: var(--global-bg-color);
+  color: var(--global-text-color);
+  box-sizing: border-box;
+
+  &::backdrop {
+    background: rgba(0, 0, 0, 0.8);
+  }
+
+  video {
+    display: block;
+    width: 100%;
+    max-height: calc(100vh - 7rem);
+    max-height: calc(100dvh - 7rem);
+    object-fit: contain;
+    background: black;
+  }
+
+  .publication-video-close {
+    position: absolute;
+    top: 0.25rem;
+    right: 0.5rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0;
+    border: 0;
+    border-radius: 0.25rem;
+    background: transparent;
+    color: inherit;
+    font-size: 2rem;
+    line-height: 1;
+    cursor: pointer;
+
+    &:focus-visible {
+      outline: 3px solid var(--global-theme-color);
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .publication-video-dialog {
+    width: 100vw;
+    max-height: 100vh;
+    max-height: 100dvh;
+    padding: 3rem 0 0.5rem;
+    border-radius: 0;
+
+    video {
+      max-height: calc(100vh - 3.5rem);
+      max-height: calc(100dvh - 3.5rem);
+    }
+  }
 }
 
 #toc-sidebar {
