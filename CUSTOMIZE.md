@@ -82,6 +82,29 @@ To add publications create a new entry in the [\_bibliography/papers.bib](_bibli
 
 You can add extra information to a publication, like a PDF file in the `assets/pdfs/` directory and add the path to the PDF file in the BibTeX entry with the `pdf` field. Some of the supported fields are: `abstract`, `altmetric`, `annotation`, `arxiv`, `bibtex_show`, `blog`, `code`, `dimensions`, `doi`, `eprint`, `html`, `isbn`, `pdf`, `pmid`, `poster`, `slides`, `supp`, `video`, and `website`.
 
+### Publication teasers
+
+For an image or animated GIF, put the file in `assets/img/publication_preview/`
+and set `preview={filename.gif}` (or a PNG/JPG filename) in the paper's BibTeX
+entry. GIF animation is preserved in the responsive WebP thumbnails, and clicking
+an image opens the original file.
+
+For an MP4 or WebM teaser, add `preview_video` with a site-relative path or a
+complete URL to the media file. Keep `preview` as its optional poster image:
+
+```bibtex
+preview={dual_arm_v2.png},
+preview_video={/projects/dual-arm-icra-2026/static/videos/videos_front_edited_compressed/1.mp4},
+```
+
+Video teasers autoplay muted, loop, and play inline on phones. Native video
+controls allow pausing and fullscreen playback. Use short, compressed clips;
+`preview_video` needs a direct video file, not a YouTube watch-page URL. The
+existing `video` field remains the separate publication Video button.
+
+The site shows all authors by default (`max_author_limit` is blank in
+`_config.yml`).
+
 ### Author annotation
 
 In publications, the author entry for yourself is identified by string array `scholar:last_name` and string array `scholar:first_name` in [\_config.yml](_config.yml). For example, if you have the following entry in your [\_config.yml](_config.yml):
