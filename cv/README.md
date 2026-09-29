@@ -45,6 +45,6 @@ cp /tmp/duo-cv-build/Duo_Zhang_CV.pdf assets/pdf/Duo_Zhang_CV.pdf
   follows the original CV; the website bibliography now also uses 2022 rather
   than its 2021 acceptance year.
 
-When FAVOR's project page is public, add its verified URL and a thumbnail to
+When FAVOR's project page is public, add its verified URL to
 `zhang2026favor` in `../_bibliography/papers.bib`. Do not use dummy URLs.
 Conference acceptance should be updated only when confirmed.
