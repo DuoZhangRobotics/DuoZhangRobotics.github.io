@@ -48,5 +48,19 @@ jobs:
         uses: lycheeverse/lychee-action@v1.9.0
         with:
           fail: true
-          # removed md files that include liquid tags
-          args: --user-agent 'curl/7.54' --exclude-path README.md --exclude-path _pages/404.md --exclude-path _pages/blog.md --exclude-path _posts/2018-12-22-distill.md --exclude-path _posts/2023-04-24-videos.md --verbose --no-progress './**/*.md' './**/*.html'
+          # Skip unrendered Liquid templates and archived posts in this source scan.
+          # The separate site workflow checks local links after Jekyll renders them.
+          # Google Fonts root URLs are preconnect origins, not fetchable pages;
+          # this anchored exclusion still checks stylesheet and font-file URLs.
+          args: >-
+            --user-agent 'curl/7.54'
+            --exclude-path README.md
+            --exclude-path _pages/404.md
+            --exclude-path _pages/blog.md
+            --exclude-path _posts/2018-12-22-distill.md
+            --exclude-path _posts/2023-04-24-videos.md
+            --exclude-path _posts_backup/
+            --exclude-path _site/
+            --exclude '^https://fonts\.(googleapis|gstatic)\.com/?$'
+            --verbose --no-progress
+            './**/*.md' './**/*.html'
