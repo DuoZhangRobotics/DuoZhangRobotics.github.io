@@ -59,27 +59,18 @@
   <script defer src="static/js/index.js"></script>
 
   <style>
-    .media-placeholder {
-      border: 2px dashed #cbd5e1;
-      border-radius: 14px;
+    .result-figure { margin: 0; min-width: 0; }
+    .result-figure img, .result-video {
+      display: block;
+      width: 100%;
+      height: auto;
+      border: 1px solid #e2e8f0;
+      border-radius: 12px;
       background: #f8fafc;
-      color: #475569;
-      min-height: 220px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      padding: 1rem;
-      font-weight: 600;
     }
-    .media-placeholder.tall { min-height: 320px; }
-    .media-placeholder.short { min-height: 160px; }
-    .placeholder-note {
-      font-size: 0.9rem;
-      color: #64748b;
-      margin-top: 0.5rem;
-      text-align: center;
-    }
+    .result-plot + .result-plot { margin-top: 2rem; }
+    .results-stack { display: grid; gap: 1.5rem; }
+    .demo-video { max-height: none; }
     .results-grid-3 {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -168,16 +159,33 @@
       <div class="container is-max-desktop">
         <div class="results-grid-3">
           <div>
-            <div class="media-placeholder short">Placeholder: Top README Image 1 (GitHub-hosted)</div>
+            <figure class="result-figure">
+            <video class="result-video" controls muted loop playsinline autoplay preload="metadata" width="340" height="338" poster="static/images/rvg-obstacle-turn-poster.png" aria-label="RVG demonstration 1">
+              <source src="static/videos/rvg-obstacle-turn.mp4" type="video/mp4">
+              <a href="static/videos/rvg-obstacle-turn.mp4">Watch RVG demonstration 1</a>.
+            </video>
+
+          </figure>
           </div>
           <div>
-            <div class="media-placeholder short">Placeholder: Top README Image 2 (GitHub-hosted)</div>
+            <figure class="result-figure">
+            <video class="result-video" controls muted loop playsinline autoplay preload="metadata" width="1012" height="1012" poster="static/images/rvg-polygon-obstacles-poster.png" aria-label="RVG demonstration 2">
+              <source src="static/videos/rvg-polygon-obstacles.mp4" type="video/mp4">
+              <a href="static/videos/rvg-polygon-obstacles.mp4">Watch RVG demonstration 2</a>.
+            </video>
+
+          </figure>
           </div>
           <div>
-            <div class="media-placeholder short">Placeholder: Top README Image 3 (GitHub-hosted)</div>
+            <figure class="result-figure">
+            <video class="result-video" controls muted loop playsinline autoplay preload="metadata" width="1012" height="1010" poster="static/images/rvg-cluttered-scene-poster.png" aria-label="RVG demonstration 3">
+              <source src="static/videos/rvg-cluttered-scene.mp4" type="video/mp4">
+              <a href="static/videos/rvg-cluttered-scene.mp4">Watch RVG demonstration 3</a>.
+            </video>
+
+          </figure>
           </div>
         </div>
-        <p class="placeholder-note">These correspond to the three images shown at the top of the README. Add local files or hosted URLs when ready.</p>
       </div>
     </section>
 
@@ -200,12 +208,17 @@
         <h3 class="title is-4 has-text-centered">What Does a Rotation-Stacked Visibility Graph (RVG) Do?</h3>
         <div class="content has-text-justified">
           <p>
-            RVG constructs a layered visibility graph over multiple discrete orientations, allowing efficient, high-quality path planning for polygonal robots with both translation and rotation in 2D environments. It maintains completeness and asymptotic optimality while enabling rapid queries across diverse planning scenarios. The README includes a narrated video illustrating how RVG works.
+            RVG constructs a layered visibility graph over multiple discrete orientations, allowing efficient, high-quality path planning for polygonal robots with both translation and rotation in 2D environments. It maintains completeness and asymptotic optimality while enabling rapid queries across diverse planning scenarios. The video below (with narrations) illustrates how RVG works.
           </p>
         </div>
 
-        <div class="media-placeholder tall">Placeholder: Narrated RVG Demo Video (README GitHub attachment)</div>
-        <p class="placeholder-note">README video attachment URL placeholder. You can replace this with an embedded video, GIF, or MP4.</p>
+        <figure class="result-figure">
+          <video class="result-video demo-video" controls playsinline preload="none" width="1920" height="1080" poster="static/images/rvg-narrated-demo-poster.jpg" aria-label="Narrated demonstration of rotation-stacked visibility graph planning">
+            <source src="static/videos/rvg-narrated-demo.mp4" type="video/mp4">
+            <a href="static/videos/rvg-narrated-demo.mp4">Watch the narrated RVG demonstration</a>.
+          </video>
+
+        </figure>
       </div>
     </section>
 
@@ -214,19 +227,30 @@
         <h2 class="title is-3 has-text-centered">Comparisons with SOTA SE(2) Rigid Body Planners</h2>
         <div class="content has-text-justified">
           <p>
-            RVG, as a multi-query method dedicated to path planning for rigid bodies in <code>SE(2)</code>, outperforms sampling-based planners in such settings, producing shorter paths with significantly lower planning times. The README highlights ten representative problem instances and compares efficiency and optimality against strong baselines.
-          </p>
-          <p>
-            Given RVG’s time budget, sampling-based methods often produce longer paths, with cost ratios exceeding <code>1.0</code>, further corroborating RVG’s superior solution quality under matched compute.
+            RVG, as a multi-query method dedicated to path planning for rigid bodies in <code>SE(2)</code>, outperforms sampling-based planners in such settings, producing shorter paths with significantly lower planning times. Below, we observe that RVG does better in efficiency and optimality for ten typical problem instances similar to the example on the right above.
           </p>
         </div>
 
-        <div class="media-placeholder tall">Placeholder: Comparison Figure (README: comparison_together)</div>
-        <p class="placeholder-note">README image placeholder for the main planner comparison panel.</p>
+        <figure class="result-figure result-plot">
+          <a href="static/images/rvg-planner-comparison.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-resolution figure: Comparison with SOTA SE(2) rigid body planners">
+            <img src="static/images/rvg-planner-comparison.png" width="14649" height="4050" loading="lazy" decoding="async" alt="Comparison with SOTA SE(2) rigid body planners">
+          </a>
 
-        <div style="height: 1rem;"></div>
-        <div class="media-placeholder">Placeholder: Cost Ratio Figure (README comparison follow-up image)</div>
-        <p class="placeholder-note">README image placeholder for the cost-ratio / optimality comparison figure.</p>
+        </figure>
+
+        <div class="content has-text-justified" style="margin-top: 2rem;">
+          <p>
+            Given RVG’s time budget, sampling-based methods often produce longer paths, with cost ratios exceeding <code>1.0</code>. This further corroborates RVG’s superior solution quality under the same amount of compute.
+          </p>
+        </div>
+
+        <figure class="result-figure result-plot">
+          <a href="static/images/rvg-cost-ratio.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-resolution figure: Cost ratio comparison">
+            <img src="static/images/rvg-cost-ratio.png" width="6368" height="2730" loading="lazy" decoding="async" alt="Cost ratio comparison">
+          </a>
+
+        </figure>
+
       </div>
     </section>
 
@@ -237,14 +261,25 @@
         <h3 class="title is-5 has-text-centered">Non-Convex Rigid Bodies</h3>
         <div class="content has-text-justified">
           <p>
-            The README shows that RVG also works with rigid bodies that are non-convex.
+            RVG works with rigid bodies that are non-convex:
           </p>
         </div>
-        <div class="results-grid-2">
-          <div class="media-placeholder">Placeholder: Non-convex Example 1</div>
-          <div class="media-placeholder">Placeholder: Non-convex Example 2</div>
+        <div class="results-stack">
+          <figure class="result-figure">
+            <video class="result-video" controls muted loop playsinline preload="none" width="1200" height="360" poster="static/images/rvg-nonconvex-pacman-poster.png" aria-label="Non-convex rigid body example 1">
+              <source src="static/videos/rvg-nonconvex-pacman.mp4" type="video/mp4">
+              <a href="static/videos/rvg-nonconvex-pacman.mp4">Watch non-convex rigid body example 1</a>.
+            </video>
+
+          </figure>
+          <figure class="result-figure">
+            <video class="result-video" controls muted loop playsinline preload="none" width="900" height="270" poster="static/images/rvg-nonconvex-c-shape-poster.png" aria-label="Non-convex rigid body example 2">
+              <source src="static/videos/rvg-nonconvex-c-shape.mp4" type="video/mp4">
+              <a href="static/videos/rvg-nonconvex-c-shape.mp4">Watch non-convex rigid body example 2</a>.
+            </video>
+
+          </figure>
         </div>
-        <p class="placeholder-note">README image placeholders for two non-convex-body examples.</p>
 
         <div style="height: 2rem;"></div>
         <h3 class="title is-5 has-text-centered">Different Translation/Rotation Weighting</h3>
@@ -254,12 +289,35 @@
           </p>
         </div>
         <div class="results-grid-4">
-          <div class="media-placeholder">Placeholder: Weighting Example 1</div>
-          <div class="media-placeholder">Placeholder: Weighting Example 2</div>
-          <div class="media-placeholder">Placeholder: Weighting Example 3</div>
-          <div class="media-placeholder">Placeholder: Weighting Example 4</div>
+          <figure class="result-figure">
+            <video class="result-video" controls muted loop playsinline preload="none" width="1386" height="1010" poster="static/images/rvg-weight-translation-poster.png" aria-label="Translation/rotation weighting example 1">
+              <source src="static/videos/rvg-weight-translation.mp4" type="video/mp4">
+              <a href="static/videos/rvg-weight-translation.mp4">Watch translation/rotation weighting example 1</a>.
+            </video>
+
+          </figure>
+          <figure class="result-figure">
+            <video class="result-video" controls muted loop playsinline preload="none" width="1386" height="1010" poster="static/images/rvg-weight-balanced-poster.png" aria-label="Translation/rotation weighting example 2">
+              <source src="static/videos/rvg-weight-balanced.mp4" type="video/mp4">
+              <a href="static/videos/rvg-weight-balanced.mp4">Watch translation/rotation weighting example 2</a>.
+            </video>
+
+          </figure>
+          <figure class="result-figure">
+            <video class="result-video" controls muted loop playsinline preload="none" width="1388" height="1010" poster="static/images/rvg-weight-rotation-biased-poster.png" aria-label="Translation/rotation weighting example 3">
+              <source src="static/videos/rvg-weight-rotation-biased.mp4" type="video/mp4">
+              <a href="static/videos/rvg-weight-rotation-biased.mp4">Watch translation/rotation weighting example 3</a>.
+            </video>
+
+          </figure>
+          <figure class="result-figure">
+            <video class="result-video" controls muted loop playsinline preload="none" width="1388" height="1008" poster="static/images/rvg-weight-rotation-poster.png" aria-label="Translation/rotation weighting example 4">
+              <source src="static/videos/rvg-weight-rotation.mp4" type="video/mp4">
+              <a href="static/videos/rvg-weight-rotation.mp4">Watch translation/rotation weighting example 4</a>.
+            </video>
+
+          </figure>
         </div>
-        <p class="placeholder-note">README image placeholders for the four weighting-based result figures.</p>
       </div>
     </section>
 
@@ -289,7 +347,7 @@
         <div class="column is-8">
           <div class="content">
             <p>
-              This page mirrors the results-focused sections of the RVG README and intentionally omits installation and usage instructions.
+              Source code and supplementary materials are available at <a href="https://github.com/arc-l/rvg" target="_blank" rel="noopener noreferrer">github.com/arc-l/rvg</a>.
             </p>
           </div>
         </div>
