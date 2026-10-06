@@ -17,16 +17,18 @@ pdflatex -interaction=nonstopmode -halt-on-error -output-directory=/tmp/duo-cv-b
 cp /tmp/duo-cv-build/Duo_Zhang_CV.pdf assets/pdf/Duo_Zhang_CV.pdf
 ```
 
-## Content sources and status (September 29, 2026)
+## Content sources and status (October 6, 2026)
 
 - Education, earlier appointments, National Scholarship, and phone: original CV ZIP.
-- Organization: Education, Publications and Preprints, one chronological Research
-  Experience section, and Teaching Experience. Peer-reviewed work is listed before
-  preprints. Rutgers contributions are grouped into three research
-  themes; numbered internal links connect research bullets to their papers.
-- Research interests, the full honors list, skills, and the VAE/LSGAN project are
-  omitted. The National Scholarship appears as one line under Education; the
-  original ZIP retains the omitted material.
+- Organization for research/R&D internship applications: a short research profile,
+  Education, chronological Research Experience, Publications and Preprints, and
+  Teaching Experience. Page one contains Rutgers, Tencent, and NYU research.
+  Peer-reviewed work is listed before preprints. Rutgers contributions remain
+  grouped into three themes; numbered internal links connect them to their papers.
+- The full honors list, generic skills section, and VAE/LSGAN project are omitted.
+  The National Scholarship appears as one line under Education. No expected Ph.D.
+  graduation date was found in the CV, site biography, or structured résumé data,
+  so none is stated. The original ZIP retains omitted background material.
 - Rutgers candidacy, adviser, email, and teaching: `_pages/about.md`, `_config.yml`,
   and `_pages/teaching.md`.
 - [dRVG](https://arxiv.org/abs/2609.31412) and
@@ -48,3 +50,37 @@ cp /tmp/duo-cv-build/Duo_Zhang_CV.pdf assets/pdf/Duo_Zhang_CV.pdf
 When FAVOR's project page is public, add its verified URL to
 `zhang2026favor` in `../_bibliography/papers.bib`. Do not use dummy URLs.
 Conference acceptance should be updated only when confirmed.
+
+## Research-claim checks for the R&D revision
+
+- **SDAR: 100% end-to-end success on evaluated rearrangement tasks in simulation.**
+  Verified in `../assets/pdf/dual_arm_2026.pdf`, the abstract and evaluation around
+  Fig. 10, and [the arXiv paper, Sec. V-B](https://arxiv.org/html/2512.08206v2#S5.SS2).
+  This is a benchmark result, not a general guarantee or hardware success rate.
+  Dual UR5e validation is supported separately by Sec. V-D.
+- **FAVOR: 99.8% point-to-point success and 1.78 s mean computation.**
+  Verified in [arXiv v2, Table II and Sec. VI-A](https://arxiv.org/html/2609.31880v2).
+  The source reports 624/625 successes and 1.779 s, including failures and timeouts;
+  only the time is rounded in the CV. The seven-DoF arm and five simulated
+  spacecraft models are retained as evaluation context. These are simulation
+  results, not real-spacecraft experiments.
+- **RVG theory and title:** the first page of `../assets/pdf/RVG.pdf` and
+  [arXiv v3](https://arxiv.org/abs/2409.03920) support resolution completeness and
+  asymptotic optimality, and the canonical title *Asymptotically-Optimal Multi-Query
+  Path Planning for a Polygonal Robot*. The project page's visible title, document
+  title, social metadata, and README now agree with the CV and bibliography.
+- **dRVG:** [the public paper](https://arxiv.org/abs/2609.31412) supports graph
+  merging, quadtree-guided exploration, and microMVP demonstrations. The CV's
+  optimality statement explicitly refers to RVG; it does not extend that claim to
+  dRVG. dRVG's completeness result depends on the stated sensing and geometric
+  assumptions and is relative to full-map RVG at the same angular resolution.
+- **ST-pRRTC:** [arXiv v1, Secs. IV-A and VI-E](https://arxiv.org/html/2609.30533v1)
+  supports GPU-parallel space-time RRT-Connect, a shared forward tree, adaptive
+  goal-time forests, known obstacle trajectories, and UR5e/Crazyflie demonstrations.
+  No universal speedup factor is stated: the reported timing excludes scene setup,
+  uses GPU-kernel time, and compares first-solution means on shared-success cases.
+  Theoretical guarantees of interval root are not attributed to practical root
+  recycling. The CV does not claim an independently verified CUDA implementation.
+
+All seven publications and the original author order are retained. No new
+appointment, award, degree date, or hardware platform has been inferred.

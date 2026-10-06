@@ -37,11 +37,14 @@
   \href{mailto:duo.zhang@rutgers.edu}{duo.zhang@rutgers.edu}
   \enspace $\vert$ \enspace (+1) 917-609-7561
   \enspace $\vert$ \enspace
-  \href{https://duozhangrobotics.github.io/}{Personal Website}\\[2pt]
-  \href{https://github.com/DuoZhangRobotics}{GitHub}
+  \href{https://duozhangrobotics.github.io/}{Website}
   \enspace $\vert$ \enspace
   \href{https://scholar.google.com/citations?user=bmEZlbkAAAAJ}{Google Scholar}
 \end{center}
+
+\textbf{Research:} Fast, scalable motion planning for manipulation: geometric and
+sampling-based algorithms, trajectory optimization, GPU acceleration, and
+real-robot validation.
 
 \section*{Education}
 \entry{Rutgers University}{September 2023--Present}
@@ -51,22 +54,85 @@ Ph.D. Candidate, Computer Science. Advisor: Prof. Jingjin Yu.
 M.S., Courant Institute of Mathematical Sciences.
 
 \entry{Shandong University}{September 2016--June 2020}
-B.E., Computer Science (June 2018--June 2020); prior undergraduate study in
-Energy and Power Engineering (September 2016--June 2018).
+B.E., Computer Science; prior study in Energy and Power Engineering (2016--2018).
 \\Selected honor: National Scholarship, Ministry of Education of China.
+
+\section*{Research Experience}
+\entry{Rutgers University, Algorithmic Robotics \& Control Lab}{September 2023--Present}
+Graduate Assistant \enspace $\vert$ \enspace Advisor: Prof. Jingjin Yu
+
+\begin{itemize}
+  \project{Geometric and online motion planning (RVG / dRVG).}{Developed RVG's
+  rotation-stacked visibility graphs for resolution-complete, asymptotically optimal
+  multi-query planning of polygonal robots. Extended its geometric roadmaps to
+  unknown static environments with dRVG's incremental graph merging and
+  quadtree-guided exploration; validated online navigation on microMVP.
+  \paperref{rvg}, \paperref{drvg}}
+
+  \project{GPU-accelerated manipulation and space-time planning.}{Integrated
+  dependency-graph task planning with GPU-accelerated synchronous motion generation
+  in \textbf{SDAR}: \textbf{100\% end-to-end success} on evaluated non-monotone
+  rearrangement tasks in simulation; validated on dual UR5e arms. \paperref{sdar}
+  Developed \textbf{ST-pRRTC}, a GPU-parallel space-time RRT-Connect planner with
+  a shared forward tree and adaptive goal-time forests for known moving-obstacle
+  trajectories; demonstrated UR5e motion among moving Crazyflie quadrotors.
+  \paperref{stprrtc}}
+
+  \project{Free-floating space manipulation (FAVOR).}{Developed B\'ezier
+  joint-velocity optimization with analytical recursive sensitivities for reaching,
+  tracking, and prescribed-time interception under coupled spacecraft--arm dynamics.
+  Achieved \textbf{99.8\% point-to-point success} at \textbf{1.78\,s mean computation}
+  in simulation with a seven-DoF arm and five spacecraft models; timing includes
+  failures and timeouts.
+  \paperref{favor}}
+\end{itemize}
+
+\entry{Tencent America, Lightspeed \& Quantum Studio}{June 2022--June 2023}
+Research \& Development Intern, Copernicus Research Group \hfill Bellevue, WA
+\begin{itemize}
+  \project{Collision-constrained trajectory optimization.}{Developed a
+  semi-infinite programming solver with conservative motion bounds and adaptive
+  subdivision to maintain feasibility; evaluated on robot arms and UAVs.
+  \paperref{sip}}
+\end{itemize}
+
+\entry{New York University, Courant Institute}{September 2021--December 2022}
+Research Assistant with Profs. Daniele Panozzo and Lerrel Pinto \hfill New York, NY
+\begin{itemize}
+  \project{Deformable-object manipulation.}{Integrated PolyFEM simulation with
+  reinforcement-learning environments; built camera-based tracking and validated
+  physical robot experiments, including a silicone-ball slingshot.}
+\end{itemize}
+
+\newpage
+\entry{Shandong University, Interdisciplinary Research Center}{January--December 2020}
+Research Assistant, Prof. Changhe Tu's lab \hfill Qingdao, China
+\begin{itemize}
+  \project{Power grasp planning.}{Worked with Xifeng Gao and Zherong Pan on
+  infinite programming with complementary constraints, kernel-integral relaxation,
+  and fast multipole evaluation for optimization-based grasp planning.
+  Published in \textit{IEEE RA-L}. \paperref{grasp}}
+\end{itemize}
+
+\entry{University of California, Los Angeles}{July--September 2019}
+Research Assistant, Prof. Sriram Sankararaman's lab \hfill Los Angeles, CA
+\begin{itemize}
+  \project{Cell-type-specific gene expression prediction.}{Developed
+  tensor-component-analysis methods for association studies and published an R
+  package through UCLA's Cross-disciplinary Scholars program.}
+\end{itemize}
 
 \section*{Publications and Preprints}
 \textbf{Conference and journal publications}
 \begin{enumerate}
   \item\label{pub:sdar} \textbf{Duo Zhang}, Junshan Huang, and Jingjin Yu.
   ``High-Performance Dual-Arm Task and Motion Planning for Tabletop
-  Rearrangement.'' \textit{IEEE International Conference on Robotics and
-  Automation (ICRA)}, 2026.
+  Rearrangement.'' \textit{IEEE ICRA}, 2026.
   \href{https://arxiv.org/abs/2512.08206}{Paper}.
 
   \item\label{pub:rvg} \textbf{Duo Zhang}, Zihe Ye, and Jingjin Yu.
   ``Asymptotically-Optimal Multi-Query Path Planning for a Polygonal Robot.''
-  \textit{IEEE International Conference on Robotics and Automation (ICRA)}, 2025.
+  \textit{IEEE ICRA}, 2025.
   \href{https://arxiv.org/abs/2409.03920}{Paper}.
 
   \item\label{pub:sip} \textbf{Duo Zhang}, Chen Liang, Xifeng Gao, Kui Wu, and Zherong Pan.
@@ -99,69 +165,6 @@ Energy and Power Engineering (September 2016--June 2018).
   \textit{arXiv preprint}, 2026.
   \href{https://arxiv.org/abs/2609.31880}{arXiv:2609.31880}.
 \end{enumerate}
-
-\newpage
-\section*{Research Experience}
-\entry{Rutgers University, Algorithmic Robotics \& Control Lab}{September 2023--Present}
-Graduate Assistant \enspace $\vert$ \enspace Advisor: Prof. Jingjin Yu
-
-\begin{itemize}
-  \project{Geometric and online motion planning.}{Developed rotation-stacked
-  visibility graphs for multi-query polygonal-robot planning (RVG), then extended
-  the approach to unknown environments through local-roadmap merging and
-  quadtree-guided sensing (dRVG). Evaluated against sampling-based planners and
-  demonstrated online navigation on a microMVP robot.
-  \paperref{rvg}, \paperref{drvg}}
-
-  \project{GPU-accelerated manipulation and space-time planning.}{Developed
-  dependency-driven dual-arm rearrangement planning (SDAR) and adaptive goal-time
-  forests for planning among moving obstacles (ST-pRRTC). Validated the methods
-  on dual UR5e arms and a UR5e operating among Crazyflie quadrotors, respectively.
-  \paperref{sdar}, \paperref{stprrtc}}
-
-  \project{Free-floating space manipulation.}{Developed B\'ezier joint-velocity
-  optimization with analytical recursive sensitivities (FAVOR) for reaching,
-  tracking, and prescribed-time interception under coupled spacecraft--arm motion.
-  Evaluated in simulation with a seven-DoF arm and five spacecraft models.
-  \paperref{favor}}
-\end{itemize}
-
-\entry{Tencent America, Lightspeed \& Quantum Studio}{June 2022--June 2023}
-Research \& Development Intern, Copernicus Research Group \hfill Bellevue, WA
-\begin{itemize}
-  \project{Collision-constrained trajectory optimization.}{Developed a
-  semi-infinite programming solver using conservative motion bounds and adaptive
-  subdivision to maintain collision-free trajectories; evaluated on articulated
-  robot arms and UAVs. \paperref{sip}}
-\end{itemize}
-
-\entry{New York University, Courant Institute}{September 2021--December 2022}
-Research Assistant with Profs. Daniele Panozzo and Lerrel Pinto \hfill New York, NY
-\begin{itemize}
-  \project{Deformable-object manipulation.}{Built OpenAI Gym
-  environments and PolyFEM tutorials for reinforcement
-  learning with deformable objects; set up camera tracking and validated robot
-  experiments, including a silicone-ball slingshot.}
-\end{itemize}
-
-\entry{Shandong University, Interdisciplinary Research Center}{January--December 2020}
-Research Assistant, Prof. Changhe Tu's lab \hfill Qingdao, China
-\begin{itemize}
-  \project{Power grasp planning.}{Worked with Xifeng Gao and Zherong Pan on
-  infinite programming with complementary constraints, kernel-integral relaxation,
-  and fast multipole evaluation for optimization-based grasp planning.
-  \paperref{grasp}}
-\end{itemize}
-
-\entry{University of California, Los Angeles}{July--September 2019}
-Research Assistant, Prof. Sriram Sankararaman's lab \hfill Los Angeles, CA\\
-Cross-disciplinary Scholars in Science and Technology Program
-\begin{itemize}
-  \project{Cell-type-specific gene expression prediction.}{Developed
-  tensor-component-analysis methods for cell-type-specific
-  gene-expression prediction and transcriptome-wide association studies;
-  implemented and published an R package for the project.}
-\end{itemize}
 
 \section*{Teaching Experience}
 \textbf{Teaching Assistant, Rutgers University}

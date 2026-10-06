@@ -10,4 +10,4 @@ description: Curriculum vitae of Duo Zhang.
 
 [Download my CV (PDF)]({{ '/assets/pdf/Duo_Zhang_CV.pdf' | relative_url }})
 
-Updated September 2026. Includes my research, publications and preprints, education, and teaching experience.
+Updated October 2026. Includes my research, publications and preprints, education, and teaching experience.
