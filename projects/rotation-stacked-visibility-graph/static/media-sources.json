@@ -1,0 +1,53 @@
+{
+  "readme": "https://github.com/arc-l/rvg/blob/main/README.md",
+  "assets": [
+    {
+      "file": "static/videos/rvg-obstacle-turn.mp4",
+      "source": "https://github.com/user-attachments/assets/ad62b570-e4dd-4854-ab40-2bdfb43a1818"
+    },
+    {
+      "file": "static/videos/rvg-polygon-obstacles.mp4",
+      "source": "https://github.com/user-attachments/assets/5a092d9f-583f-4b50-ac1b-6ad1290a553a"
+    },
+    {
+      "file": "static/videos/rvg-cluttered-scene.mp4",
+      "source": "https://github.com/user-attachments/assets/110dd7d3-0de2-4bd9-8e55-c0b13f61f0cd"
+    },
+    {
+      "file": "static/videos/rvg-nonconvex-pacman.mp4",
+      "source": "https://github.com/user-attachments/assets/567d7675-561f-4a3d-ae1c-d47713370128"
+    },
+    {
+      "file": "static/videos/rvg-nonconvex-c-shape.mp4",
+      "source": "https://github.com/user-attachments/assets/1225cd51-1996-4cf4-953c-3e00bbb623b8"
+    },
+    {
+      "file": "static/videos/rvg-weight-translation.mp4",
+      "source": "https://github.com/user-attachments/assets/040a7b34-5e9e-4d0c-aed4-2a7dd7cee587"
+    },
+    {
+      "file": "static/videos/rvg-weight-balanced.mp4",
+      "source": "https://github.com/user-attachments/assets/190e84ec-8a3e-4f83-ac2c-be2240138627"
+    },
+    {
+      "file": "static/videos/rvg-weight-rotation-biased.mp4",
+      "source": "https://github.com/user-attachments/assets/ab5e146e-ae8d-424e-ba43-2a6d173356f5"
+    },
+    {
+      "file": "static/videos/rvg-weight-rotation.mp4",
+      "source": "https://github.com/user-attachments/assets/bf9f0740-16fc-490c-ab49-afe5199717b3"
+    },
+    {
+      "file": "static/images/rvg-planner-comparison.png",
+      "source": "https://github.com/user-attachments/assets/7d2d459e-5ced-488b-a054-98cae8f0f26c"
+    },
+    {
+      "file": "static/images/rvg-cost-ratio.png",
+      "source": "https://github.com/user-attachments/assets/09e63f81-a89a-4f2a-a1b2-e97df4f5c867"
+    },
+    {
+      "file": "static/videos/rvg-narrated-demo.mp4",
+      "source": "https://github.com/user-attachments/assets/e8292aab-cb14-4794-8171-dd2f7ae271db"
+    }
+  ]
+}
