@@ -68,15 +68,7 @@
       border-radius: 12px;
       background: #f8fafc;
     }
-    .result-figure figcaption {
-      margin: 0.75rem 0 0;
-      color: #475569;
-      font-size: 0.95rem;
-      line-height: 1.6;
-      text-align: center;
-    }
     .result-plot + .result-plot { margin-top: 2rem; }
-    .result-note { color: #475569; font-size: 0.95rem; line-height: 1.6; }
     .results-stack { display: grid; gap: 1.5rem; }
     .demo-video { max-height: none; }
     .results-grid-3 {
@@ -168,29 +160,29 @@
         <div class="results-grid-3">
           <div>
             <figure class="result-figure">
-            <video class="result-video" controls muted loop playsinline autoplay preload="metadata" width="340" height="338" poster="static/images/rvg-obstacle-turn-poster.png" aria-label="Translation and rotation around an obstacle">
+            <video class="result-video" controls muted loop playsinline autoplay preload="metadata" width="340" height="338" poster="static/images/rvg-obstacle-turn-poster.png" aria-label="RVG demonstration 1">
               <source src="static/videos/rvg-obstacle-turn.mp4" type="video/mp4">
-              <a href="static/videos/rvg-obstacle-turn.mp4">Watch translation and rotation around an obstacle</a>.
+              <a href="static/videos/rvg-obstacle-turn.mp4">Watch RVG demonstration 1</a>.
             </video>
-            <figcaption>Translation and rotation around an obstacle</figcaption>
+
           </figure>
           </div>
           <div>
             <figure class="result-figure">
-            <video class="result-video" controls muted loop playsinline autoplay preload="metadata" width="1012" height="1012" poster="static/images/rvg-polygon-obstacles-poster.png" aria-label="Planning among polygonal obstacles">
+            <video class="result-video" controls muted loop playsinline autoplay preload="metadata" width="1012" height="1012" poster="static/images/rvg-polygon-obstacles-poster.png" aria-label="RVG demonstration 2">
               <source src="static/videos/rvg-polygon-obstacles.mp4" type="video/mp4">
-              <a href="static/videos/rvg-polygon-obstacles.mp4">Watch planning among polygonal obstacles</a>.
+              <a href="static/videos/rvg-polygon-obstacles.mp4">Watch RVG demonstration 2</a>.
             </video>
-            <figcaption>Planning among polygonal obstacles</figcaption>
+
           </figure>
           </div>
           <div>
             <figure class="result-figure">
-            <video class="result-video" controls muted loop playsinline autoplay preload="metadata" width="1012" height="1010" poster="static/images/rvg-cluttered-scene-poster.png" aria-label="Planning in a cluttered environment">
+            <video class="result-video" controls muted loop playsinline autoplay preload="metadata" width="1012" height="1010" poster="static/images/rvg-cluttered-scene-poster.png" aria-label="RVG demonstration 3">
               <source src="static/videos/rvg-cluttered-scene.mp4" type="video/mp4">
-              <a href="static/videos/rvg-cluttered-scene.mp4">Watch planning in a cluttered environment</a>.
+              <a href="static/videos/rvg-cluttered-scene.mp4">Watch RVG demonstration 3</a>.
             </video>
-            <figcaption>Planning in a cluttered environment</figcaption>
+
           </figure>
           </div>
         </div>
@@ -216,7 +208,7 @@
         <h3 class="title is-4 has-text-centered">What Does a Rotation-Stacked Visibility Graph (RVG) Do?</h3>
         <div class="content has-text-justified">
           <p>
-            RVG constructs a layered visibility graph over multiple discrete orientations, allowing efficient, high-quality path planning for polygonal robots with both translation and rotation in 2D environments. It maintains completeness and asymptotic optimality while enabling rapid queries across diverse planning scenarios. The narrated demonstration below illustrates how RVG constructs and queries the graph.
+            RVG constructs a layered visibility graph over multiple discrete orientations, allowing efficient, high-quality path planning for polygonal robots with both translation and rotation in 2D environments. It maintains completeness and asymptotic optimality while enabling rapid queries across diverse planning scenarios. The video below (with narrations) illustrates how RVG works.
           </p>
         </div>
 
@@ -225,7 +217,7 @@
             <source src="static/videos/rvg-narrated-demo.mp4" type="video/mp4">
             <a href="static/videos/rvg-narrated-demo.mp4">Watch the narrated RVG demonstration</a>.
           </video>
-          <figcaption>From visibility graphs at individual orientations to paths with simultaneous translation and rotation. <a href="https://youtu.be/iH7PsPNSOAY" target="_blank" rel="noopener noreferrer">Watch the full paper video on YouTube</a>.</figcaption>
+
         </figure>
       </div>
     </section>
@@ -235,27 +227,30 @@
         <h2 class="title is-3 has-text-centered">Comparisons with SOTA SE(2) Rigid Body Planners</h2>
         <div class="content has-text-justified">
           <p>
-            RVG, as a multi-query method dedicated to path planning for rigid bodies in <code>SE(2)</code>, outperforms sampling-based planners in such settings, producing shorter paths with significantly lower planning times. The experiments compare RVG with RRT*, AIT*, BIT*, PRM*, Lazy PRM*, EIT*, and LBTRRT across ten maps in each of two difficulty settings.
-          </p>
-          <p>
-            The first figure compares solution path lengths. The second reports sampling-based path lengths relative to RVG under matched computation budgets at different orientation resolutions; a ratio above <code>1.0</code> means a longer path than RVG.
+            RVG, as a multi-query method dedicated to path planning for rigid bodies in <code>SE(2)</code>, outperforms sampling-based planners in such settings, producing shorter paths with significantly lower planning times. Below, we observe that RVG does better in efficiency and optimality for ten typical problem instances similar to the example on the right above.
           </p>
         </div>
 
-<figure class="result-figure result-plot">
-          <a href="static/images/rvg-planner-comparison.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-resolution figure: Path-length comparison of RVG and seven sampling-based planners across standard and challenging maps">
-            <img src="static/images/rvg-planner-comparison.png" width="14649" height="4050" loading="lazy" decoding="async" alt="Path-length comparison of RVG and seven sampling-based planners across standard and challenging maps">
+        <figure class="result-figure result-plot">
+          <a href="static/images/rvg-planner-comparison.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-resolution figure: Comparison with SOTA SE(2) rigid body planners">
+            <img src="static/images/rvg-planner-comparison.png" width="14649" height="4050" loading="lazy" decoding="async" alt="Comparison with SOTA SE(2) rigid body planners">
           </a>
-          <figcaption>Standard instances (top; sampling budgets of 1 s and 10 s) and challenging instances (bottom; 20 s). RVG uses 36 orientation slices. Select the figure to view it at full resolution.</figcaption>
+
         </figure>
 
+        <div class="content has-text-justified" style="margin-top: 2rem;">
+          <p>
+            Given RVG’s time budget, sampling-based methods often produce longer paths, with cost ratios exceeding <code>1.0</code>. This further corroborates RVG’s superior solution quality under the same amount of compute.
+          </p>
+        </div>
+
         <figure class="result-figure result-plot">
-          <a href="static/images/rvg-cost-ratio.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-resolution figure: Sampling-based path length divided by RVG path length as orientation resolution increases">
-            <img src="static/images/rvg-cost-ratio.png" width="6368" height="2730" loading="lazy" decoding="async" alt="Sampling-based path length divided by RVG path length as orientation resolution increases">
+          <a href="static/images/rvg-cost-ratio.png" target="_blank" rel="noopener noreferrer" aria-label="Open full-resolution figure: Cost ratio comparison">
+            <img src="static/images/rvg-cost-ratio.png" width="6368" height="2730" loading="lazy" decoding="async" alt="Cost ratio comparison">
           </a>
-          <figcaption>Archived cost-ratio comparison; RVG is the reference at 1.0. Select the figure to view it at full resolution.</figcaption>
+
         </figure>
-        <p class="result-note">The archived ratio plot includes only samples whose ratio is at least 1.0. It therefore describes that subset of the experiments, rather than the complete distribution of relative path lengths.</p>
+
       </div>
     </section>
 
@@ -266,23 +261,23 @@
         <h3 class="title is-5 has-text-centered">Non-Convex Rigid Bodies</h3>
         <div class="content has-text-justified">
           <p>
-            These examples demonstrate RVG planning for non-convex rigid bodies, including a Pac-Man-shaped robot and a C-shaped robot.
+            RVG works with rigid bodies that are non-convex:
           </p>
         </div>
         <div class="results-stack">
           <figure class="result-figure">
-            <video class="result-video" controls muted loop playsinline preload="none" width="1200" height="360" poster="static/images/rvg-nonconvex-pacman-poster.png" aria-label="Non-convex Pac-Man-shaped robot">
+            <video class="result-video" controls muted loop playsinline preload="none" width="1200" height="360" poster="static/images/rvg-nonconvex-pacman-poster.png" aria-label="Non-convex rigid body example 1">
               <source src="static/videos/rvg-nonconvex-pacman.mp4" type="video/mp4">
-              <a href="static/videos/rvg-nonconvex-pacman.mp4">Watch non-convex pac-man-shaped robot</a>.
+              <a href="static/videos/rvg-nonconvex-pacman.mp4">Watch non-convex rigid body example 1</a>.
             </video>
-            <figcaption>A Pac-Man-shaped robot translates and rotates through a constrained passage.</figcaption>
+
           </figure>
           <figure class="result-figure">
-            <video class="result-video" controls muted loop playsinline preload="none" width="900" height="270" poster="static/images/rvg-nonconvex-c-shape-poster.png" aria-label="Non-convex C-shaped robot">
+            <video class="result-video" controls muted loop playsinline preload="none" width="900" height="270" poster="static/images/rvg-nonconvex-c-shape-poster.png" aria-label="Non-convex rigid body example 2">
               <source src="static/videos/rvg-nonconvex-c-shape.mp4" type="video/mp4">
-              <a href="static/videos/rvg-nonconvex-c-shape.mp4">Watch non-convex c-shaped robot</a>.
+              <a href="static/videos/rvg-nonconvex-c-shape.mp4">Watch non-convex rigid body example 2</a>.
             </video>
-            <figcaption>A C-shaped robot moves past obstacles inside a narrow corridor.</figcaption>
+
           </figure>
         </div>
 
@@ -295,32 +290,32 @@
         </div>
         <div class="results-grid-4">
           <figure class="result-figure">
-            <video class="result-video" controls muted loop playsinline preload="none" width="1386" height="1010" poster="static/images/rvg-weight-translation-poster.png" aria-label="Translation only">
+            <video class="result-video" controls muted loop playsinline preload="none" width="1386" height="1010" poster="static/images/rvg-weight-translation-poster.png" aria-label="Translation/rotation weighting example 1">
               <source src="static/videos/rvg-weight-translation.mp4" type="video/mp4">
-              <a href="static/videos/rvg-weight-translation.mp4">Watch translation only</a>.
+              <a href="static/videos/rvg-weight-translation.mp4">Watch translation/rotation weighting example 1</a>.
             </video>
-            <figcaption>Translation weight 1.0 &middot; Rotation weight 0.0</figcaption>
+
           </figure>
           <figure class="result-figure">
-            <video class="result-video" controls muted loop playsinline preload="none" width="1386" height="1010" poster="static/images/rvg-weight-balanced-poster.png" aria-label="Equal translation and rotation weights">
+            <video class="result-video" controls muted loop playsinline preload="none" width="1386" height="1010" poster="static/images/rvg-weight-balanced-poster.png" aria-label="Translation/rotation weighting example 2">
               <source src="static/videos/rvg-weight-balanced.mp4" type="video/mp4">
-              <a href="static/videos/rvg-weight-balanced.mp4">Watch equal translation and rotation weights</a>.
+              <a href="static/videos/rvg-weight-balanced.mp4">Watch translation/rotation weighting example 2</a>.
             </video>
-            <figcaption>Translation weight 0.5 &middot; Rotation weight 0.5</figcaption>
+
           </figure>
           <figure class="result-figure">
-            <video class="result-video" controls muted loop playsinline preload="none" width="1388" height="1010" poster="static/images/rvg-weight-rotation-biased-poster.png" aria-label="Slightly higher rotation weight">
+            <video class="result-video" controls muted loop playsinline preload="none" width="1388" height="1010" poster="static/images/rvg-weight-rotation-biased-poster.png" aria-label="Translation/rotation weighting example 3">
               <source src="static/videos/rvg-weight-rotation-biased.mp4" type="video/mp4">
-              <a href="static/videos/rvg-weight-rotation-biased.mp4">Watch slightly higher rotation weight</a>.
+              <a href="static/videos/rvg-weight-rotation-biased.mp4">Watch translation/rotation weighting example 3</a>.
             </video>
-            <figcaption>Translation weight 0.48 &middot; Rotation weight 0.52</figcaption>
+
           </figure>
           <figure class="result-figure">
-            <video class="result-video" controls muted loop playsinline preload="none" width="1388" height="1008" poster="static/images/rvg-weight-rotation-poster.png" aria-label="Rotation only">
+            <video class="result-video" controls muted loop playsinline preload="none" width="1388" height="1008" poster="static/images/rvg-weight-rotation-poster.png" aria-label="Translation/rotation weighting example 4">
               <source src="static/videos/rvg-weight-rotation.mp4" type="video/mp4">
-              <a href="static/videos/rvg-weight-rotation.mp4">Watch rotation only</a>.
+              <a href="static/videos/rvg-weight-rotation.mp4">Watch translation/rotation weighting example 4</a>.
             </video>
-            <figcaption>Translation weight 0.0 &middot; Rotation weight 1.0</figcaption>
+
           </figure>
         </div>
       </div>
@@ -352,7 +347,7 @@
         <div class="column is-8">
           <div class="content">
             <p>
-              Supplementary results and demonstrations for rotation-stacked visibility graphs. <a href="https://github.com/arc-l/rvg" target="_blank" rel="noopener noreferrer">Source code and usage examples</a>.
+              Source code and supplementary materials are available at <a href="https://github.com/arc-l/rvg" target="_blank" rel="noopener noreferrer">github.com/arc-l/rvg</a>.
             </p>
           </div>
         </div>
