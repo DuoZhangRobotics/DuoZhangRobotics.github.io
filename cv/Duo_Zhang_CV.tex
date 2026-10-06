@@ -8,6 +8,7 @@
 \usepackage{enumitem}
 \usepackage{titlesec}
 \usepackage{fancyhdr}
+\usepackage{needspace}
 \usepackage{xcolor}
 \usepackage{hyperref}
 \definecolor{linkblue}{HTML}{184C73}
@@ -22,11 +23,13 @@
 \setlist[enumerate]{leftmargin=1.7em,label={[\arabic*]},ref=\arabic*,topsep=3pt,itemsep=5pt,parsep=0pt}
 \pagestyle{fancy}
 \fancyhf{}
+\fancyhead[L]{\ifnum\value{page}>1\small\itshape Research Experience (continued)\fi}
 \renewcommand{\headrulewidth}{0pt}
 \fancyfoot[L]{\small Duo Zhang \quad | \quad Curriculum Vitae}
 \fancyfoot[R]{\small \thepage}
 \setlength{\footskip}{24pt}
-\newcommand{\entry}[2]{\textbf{#1}\hfill #2\par}
+\setlength{\headheight}{14pt}
+\newcommand{\entry}[2]{\Needspace{6\baselineskip}\textbf{#1}\hfill #2\par}
 \newcommand{\project}[2]{\item \textbf{#1}\enspace #2}
 \newcommand{\paperref}[1]{\hyperref[pub:#1]{[\ref*{pub:#1}]}}
 
@@ -39,12 +42,14 @@
   \enspace $\vert$ \enspace
   \href{https://duozhangrobotics.github.io/}{Website}
   \enspace $\vert$ \enspace
+  \href{https://github.com/DuoZhangRobotics}{GitHub}
+  \enspace $\vert$ \enspace
   \href{https://scholar.google.com/citations?user=bmEZlbkAAAAJ}{Google Scholar}
 \end{center}
 
-\textbf{Research:} Fast, scalable motion planning for manipulation: geometric and
-sampling-based algorithms, trajectory optimization, GPU acceleration, and
-real-robot validation.
+\textbf{Research:} Motion planning and manipulation, with an emphasis on
+high-performance geometric and sampling-based algorithms, trajectory optimization,
+GPU acceleration, and real-robot systems.
 
 \section*{Education}
 \entry{Rutgers University}{September 2023--Present}
@@ -62,18 +67,21 @@ B.E., Computer Science; prior study in Energy and Power Engineering (2016--2018)
 Graduate Assistant \enspace $\vert$ \enspace Advisor: Prof. Jingjin Yu
 
 \begin{itemize}
-  \project{Geometric and online motion planning (RVG / dRVG).}{Developed RVG's
-  rotation-stacked visibility graphs for resolution-complete, asymptotically optimal
-  multi-query planning of polygonal robots. Extended its geometric roadmaps to
-  unknown static environments with dRVG's incremental graph merging and
-  quadtree-guided exploration; validated online navigation on microMVP.
+  \project{Geometric and online motion planning (RVG / dRVG).}{Developed
+  rotation-stacked visibility graphs (RVG) for resolution-complete, asymptotically
+  optimal multi-query planning of polygonal robots. Extended RVG to online planning
+  in unknown static environments using incremental graph merging and
+  quadtree-guided exploration (dRVG); validated online navigation on microMVP.
   \paperref{rvg}, \paperref{drvg}}
 
-  \project{GPU-accelerated manipulation and space-time planning.}{Integrated
-  dependency-graph task planning with GPU-accelerated synchronous motion generation
-  in \textbf{SDAR}: \textbf{100\% end-to-end success} on evaluated non-monotone
-  rearrangement tasks in simulation; validated on dual UR5e arms. \paperref{sdar}
-  Developed \textbf{ST-pRRTC}, a GPU-parallel space-time RRT-Connect planner with
+  \project{Dual-arm task and motion planning (SDAR).}{Integrated
+  dependency-driven task planning with synchronous dual-arm motion planning,
+  exploiting tabletop rearrangement structure. Achieved \textbf{100\% end-to-end success}
+  on evaluated non-monotone
+  rearrangement tasks in simulation; validated on dual UR5e arms. \paperref{sdar}}
+
+  \project{GPU-parallel space-time planning (ST-pRRTC).}{Developed a
+  GPU-parallel space-time RRT-Connect planner with
   a shared forward tree and adaptive goal-time forests for known moving-obstacle
   trajectories; demonstrated UR5e motion among moving Crazyflie quadrotors.
   \paperref{stprrtc}}
@@ -104,7 +112,6 @@ Research Assistant with Profs. Daniele Panozzo and Lerrel Pinto \hfill New York,
   physical robot experiments, including a silicone-ball slingshot.}
 \end{itemize}
 
-\newpage
 \entry{Shandong University, Interdisciplinary Research Center}{January--December 2020}
 Research Assistant, Prof. Changhe Tu's lab \hfill Qingdao, China
 \begin{itemize}

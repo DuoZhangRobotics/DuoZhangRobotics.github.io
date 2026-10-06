@@ -24,7 +24,12 @@ cp /tmp/duo-cv-build/Duo_Zhang_CV.pdf assets/pdf/Duo_Zhang_CV.pdf
   Education, chronological Research Experience, Publications and Preprints, and
   Teaching Experience. Page one contains Rutgers, Tencent, and NYU research.
   Peer-reviewed work is listed before preprints. Rutgers contributions remain
-  grouped into three themes; numbered internal links connect them to their papers.
+  grouped into four directions: RVG/dRVG, SDAR, ST-pRRTC, and FAVOR; numbered
+  internal links connect them to their papers. SDAR emphasizes task structure and
+  synchronous dual-arm planning; GPU acceleration is explicit in ST-pRRTC.
+- The contact line includes Website, GitHub, and Google Scholar. There is no forced
+  page break in Research Experience. A small continuation heading identifies the
+  research entries at the top of page two after the natural page break.
 - The full honors list, generic skills section, and VAE/LSGAN project are omitted.
   The National Scholarship appears as one line under Education. No expected Ph.D.
   graduation date was found in the CV, site biography, or structured résumé data,
