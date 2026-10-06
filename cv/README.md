@@ -27,9 +27,9 @@ cp /tmp/duo-cv-build/Duo_Zhang_CV.pdf assets/pdf/Duo_Zhang_CV.pdf
   grouped into four directions: RVG/dRVG, SDAR, ST-pRRTC, and FAVOR; numbered
   internal links connect them to their papers. SDAR emphasizes task structure and
   synchronous dual-arm planning; GPU acceleration is explicit in ST-pRRTC.
-- The contact line includes Website, GitHub, and Google Scholar. There is no forced
-  page break in Research Experience. A small continuation heading identifies the
-  research entries at the top of page two after the natural page break.
+- The contact line includes Website, GitHub, and Google Scholar. Research
+  Experience flows without a forced page break or continuation header; automatic
+  space reservation keeps appointment headings with their descriptions.
 - The full honors list, generic skills section, and VAE/LSGAN project are omitted.
   The National Scholarship appears as one line under Education. No expected Ph.D.
   graduation date was found in the CV, site biography, or structured résumé data,
@@ -68,7 +68,9 @@ Conference acceptance should be updated only when confirmed.
   The source reports 624/625 successes and 1.779 s, including failures and timeouts;
   only the time is rounded in the CV. The seven-DoF arm and five simulated
   spacecraft models are retained as evaluation context. These are simulation
-  results, not real-spacecraft experiments.
+  results, not real-spacecraft experiments. The concise CV sentence reports mean
+  computation without implying a successful-trials-only average; the full timing
+  definition remains documented here.
 - **RVG theory and title:** the first page of `../assets/pdf/RVG.pdf` and
   [arXiv v3](https://arxiv.org/abs/2409.03920) support resolution completeness and
   asymptotic optimality, and the canonical title *Asymptotically-Optimal Multi-Query

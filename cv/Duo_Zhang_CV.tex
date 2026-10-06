@@ -23,12 +23,10 @@
 \setlist[enumerate]{leftmargin=1.7em,label={[\arabic*]},ref=\arabic*,topsep=3pt,itemsep=5pt,parsep=0pt}
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[L]{\ifnum\value{page}>1\small\itshape Research Experience (continued)\fi}
 \renewcommand{\headrulewidth}{0pt}
 \fancyfoot[L]{\small Duo Zhang \quad | \quad Curriculum Vitae}
 \fancyfoot[R]{\small \thepage}
 \setlength{\footskip}{24pt}
-\setlength{\headheight}{14pt}
 \newcommand{\entry}[2]{\Needspace{6\baselineskip}\textbf{#1}\hfill #2\par}
 \newcommand{\project}[2]{\item \textbf{#1}\enspace #2}
 \newcommand{\paperref}[1]{\hyperref[pub:#1]{[\ref*{pub:#1}]}}
@@ -69,7 +67,7 @@ Graduate Assistant \enspace $\vert$ \enspace Advisor: Prof. Jingjin Yu
 \begin{itemize}
   \project{Geometric and online motion planning (RVG / dRVG).}{Developed
   rotation-stacked visibility graphs (RVG) for resolution-complete, asymptotically
-  optimal multi-query planning of polygonal robots. Extended RVG to online planning
+  optimal multi-query planning of polygonal robots. Extended the framework to online planning
   in unknown static environments using incremental graph merging and
   quadtree-guided exploration (dRVG); validated online navigation on microMVP.
   \paperref{rvg}, \paperref{drvg}}
@@ -89,9 +87,8 @@ Graduate Assistant \enspace $\vert$ \enspace Advisor: Prof. Jingjin Yu
   \project{Free-floating space manipulation (FAVOR).}{Developed B\'ezier
   joint-velocity optimization with analytical recursive sensitivities for reaching,
   tracking, and prescribed-time interception under coupled spacecraft--arm dynamics.
-  Achieved \textbf{99.8\% point-to-point success} at \textbf{1.78\,s mean computation}
-  in simulation with a seven-DoF arm and five spacecraft models; timing includes
-  failures and timeouts.
+  Achieved \textbf{99.8\% point-to-point success} with \textbf{1.78\,s mean computation}
+  in simulation using a seven-DoF arm across five spacecraft models.
   \paperref{favor}}
 \end{itemize}
 
