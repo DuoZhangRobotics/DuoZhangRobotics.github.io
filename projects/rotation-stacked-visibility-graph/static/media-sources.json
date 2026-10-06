@@ -1,0 +1,86 @@
+{
+  "readme": "https://github.com/arc-l/rvg/blob/main/README.md",
+  "assets": [
+    {
+      "file": "static/videos/rvg-obstacle-turn.mp4",
+      "source": "https://github.com/user-attachments/assets/ad62b570-e4dd-4854-ab40-2bdfb43a1818",
+      "source_sha256": "b40241147a930d4f03849fc2a959fd051d54e9308ddac19f77d3fc24cd645637",
+      "conversion": "H.264 MP4, original frame timing, yuv420p, fast start; no audio",
+      "poster": "static/images/rvg-obstacle-turn-poster.png"
+    },
+    {
+      "file": "static/videos/rvg-polygon-obstacles.mp4",
+      "source": "https://github.com/user-attachments/assets/5a092d9f-583f-4b50-ac1b-6ad1290a553a",
+      "source_sha256": "08cde1a16d2c4c809f8e14fee3e8780a4fcfb2da19630cb12116a91f8994e5d8",
+      "conversion": "H.264 MP4, original frame timing, yuv420p, fast start; no audio",
+      "poster": "static/images/rvg-polygon-obstacles-poster.png"
+    },
+    {
+      "file": "static/videos/rvg-cluttered-scene.mp4",
+      "source": "https://github.com/user-attachments/assets/110dd7d3-0de2-4bd9-8e55-c0b13f61f0cd",
+      "source_sha256": "1878808892932cee8b09f7fd1e9ca07d650618d69c521b3131cae3bb7a671ded",
+      "conversion": "H.264 MP4, original frame timing, yuv420p, fast start; no audio",
+      "poster": "static/images/rvg-cluttered-scene-poster.png"
+    },
+    {
+      "file": "static/videos/rvg-nonconvex-pacman.mp4",
+      "source": "https://github.com/user-attachments/assets/567d7675-561f-4a3d-ae1c-d47713370128",
+      "source_sha256": "55aa2b2c1a801ae13dd02aec36fc3f7403046b735d2dd78d65de9d768b2a9f61",
+      "conversion": "H.264 MP4, original frame timing, yuv420p, fast start; no audio",
+      "poster": "static/images/rvg-nonconvex-pacman-poster.png"
+    },
+    {
+      "file": "static/videos/rvg-nonconvex-c-shape.mp4",
+      "source": "https://github.com/user-attachments/assets/1225cd51-1996-4cf4-953c-3e00bbb623b8",
+      "source_sha256": "19e4459f043df12e50772a9e8370fc5a4445ecdcac65c52235cc6050d58f8351",
+      "conversion": "H.264 MP4, original frame timing, yuv420p, fast start; no audio",
+      "poster": "static/images/rvg-nonconvex-c-shape-poster.png"
+    },
+    {
+      "file": "static/videos/rvg-weight-translation.mp4",
+      "source": "https://github.com/user-attachments/assets/040a7b34-5e9e-4d0c-aed4-2a7dd7cee587",
+      "source_sha256": "3b554c35f35ed342847ad74b6df66d7ce2b66075a407da956c135773aa98d773",
+      "conversion": "H.264 MP4, original frame timing, yuv420p, fast start; no audio",
+      "poster": "static/images/rvg-weight-translation-poster.png"
+    },
+    {
+      "file": "static/videos/rvg-weight-balanced.mp4",
+      "source": "https://github.com/user-attachments/assets/190e84ec-8a3e-4f83-ac2c-be2240138627",
+      "source_sha256": "ff3578f9201f152137dd7eccb27ee14b10d9fc3f874eb3ee251f9db5c2f8de12",
+      "conversion": "H.264 MP4, original frame timing, yuv420p, fast start; no audio",
+      "poster": "static/images/rvg-weight-balanced-poster.png"
+    },
+    {
+      "file": "static/videos/rvg-weight-rotation-biased.mp4",
+      "source": "https://github.com/user-attachments/assets/ab5e146e-ae8d-424e-ba43-2a6d173356f5",
+      "source_sha256": "d98ca149497d1f66ff9271f0da31d4bff69ef1216b56d047a76efbc9cb675061",
+      "conversion": "H.264 MP4, original frame timing, yuv420p, fast start; no audio",
+      "poster": "static/images/rvg-weight-rotation-biased-poster.png"
+    },
+    {
+      "file": "static/videos/rvg-weight-rotation.mp4",
+      "source": "https://github.com/user-attachments/assets/bf9f0740-16fc-490c-ab49-afe5199717b3",
+      "source_sha256": "fb88912c119db7d8fddbf7e4531210b423447d64acd8f2bf7f3eeba67a1d6ca8",
+      "conversion": "H.264 MP4, original frame timing, yuv420p, fast start; no audio",
+      "poster": "static/images/rvg-weight-rotation-poster.png"
+    },
+    {
+      "file": "static/images/rvg-planner-comparison.png",
+      "source": "https://github.com/user-attachments/assets/7d2d459e-5ced-488b-a054-98cae8f0f26c",
+      "source_sha256": "14000cc2830aee768a17b0a24912cb527f98a0323e62ab1e60e373506349e370",
+      "local_lower_resolution_copy": "Results_ICRA/comparison_together.png"
+    },
+    {
+      "file": "static/images/rvg-cost-ratio.png",
+      "source": "https://github.com/user-attachments/assets/09e63f81-a89a-4f2a-a1b2-e97df4f5c867",
+      "source_sha256": "62a9044f72b0606c3a8b836445f708254b8cec6fb91f01adb68898090ba84ff4",
+      "local_lower_resolution_copy": "Results_ICRA/ratio.png"
+    },
+    {
+      "file": "static/videos/rvg-narrated-demo.mp4",
+      "source": "https://github.com/user-attachments/assets/e8292aab-cb14-4794-8171-dd2f7ae271db",
+      "conversion": "Original README MP4"
+    }
+  ],
+  "ratio_figure_note": "The archived scripts/ratio.py excludes samples with sampling_path_length / rvg_path_length < 1.0."
+}
