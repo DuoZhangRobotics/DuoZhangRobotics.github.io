@@ -33,7 +33,7 @@
   <link rel="stylesheet" href="static/css/bulma.min.css">
   <link rel="stylesheet" href="static/css/index.css">
   <link rel="stylesheet" href="static/css/project.css">
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ScholarlyArticle", "headline": "ST-pRRTC: Parallel Space-Time RRT-C with Adaptive Goal-Time Forests", "author": [{"@type": "Person", "name": "Duo Zhang"}, {"@type": "Person", "name": "Jintong Li"}, {"@type": "Person", "name": "Junshan Huang"}, {"@type": "Person", "name": "Jingjin Yu"}], "datePublished": "2026-09-24", "url": "https://duozhangrobotics.github.io/projects/st-prrtc/", "sameAs": "https://arxiv.org/abs/2609.30533", "description": "GPU-parallel space-time RRT-Connect with continuous goal-time sampling and root recycling for motion planning among known moving obstacles."}</script>
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ScholarlyArticle", "headline": "ST-pRRTC: Parallel Space-Time RRT-C with Adaptive Goal-Time Forests", "author": [{"@type": "Person", "name": "Duo Zhang"}, {"@type": "Person", "name": "Jintong Li"}, {"@type": "Person", "name": "Junshan Huang", "url": "https://junshanhuang.com/"}, {"@type": "Person", "name": "Jingjin Yu"}], "datePublished": "2026-09-24", "url": "https://duozhangrobotics.github.io/projects/st-prrtc/", "sameAs": "https://arxiv.org/abs/2609.30533", "description": "GPU-parallel space-time RRT-Connect with continuous goal-time sampling and root recycling for motion planning among known moving obstacles."}</script>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to content</a>
@@ -42,7 +42,7 @@
     <div class="hero-body"><div class="container is-max-desktop has-text-centered">
       <h1 class="title is-1 publication-title">ST-pRRTC: Parallel Space-Time RRT-C<br>with Adaptive Goal-Time Forests</h1>
       <div class="is-size-5 publication-authors">
-        <a href="https://duozhangrobotics.github.io/">Duo Zhang</a>, Jintong Li, Junshan Huang, <a href="https://arc-l.github.io/group.html">Jingjin Yu</a>
+        <a href="https://duozhangrobotics.github.io/">Duo Zhang</a>, Jintong Li, <a href="https://junshanhuang.com/">Junshan Huang</a>, <a href="https://arc-l.github.io/group.html">Jingjin Yu</a>
       </div>
       <p class="publication-authors">Department of Computer Science, Rutgers University</p>
       <p>arXiv preprint, 2026</p>
@@ -51,7 +51,6 @@
         <a class="button is-dark is-rounded" href="https://arxiv.org/pdf/2609.30533">Paper PDF</a>
         <a class="button is-dark is-rounded" href="#video">Video</a>
         <a class="button is-dark is-rounded" href="#demos">Real-robot demos</a>
-        <a class="button is-dark is-rounded" href="static/files/ST_pRRTC_poster.pptx" download>Poster (PowerPoint)</a>
       </div>
       <p class="project-status">Code is not yet released.</p>
       <nav class="project-nav" aria-label="Project sections"><a href="#method">Method</a><a href="#benchmarks">Benchmarks</a><a href="#citation">Citation</a></nav>
@@ -121,6 +120,58 @@
   <img class="plot" src="static/images/success-tabletop-rearrangement.png" width="1410" height="948" loading="lazy" alt="Tabletop: percentage of solved problems versus first-solution compute time for root recycling, interval root, ST-RRT star, and SI-RRT.">
   <img class="plot" src="static/images/arrival-tabletop-rearrangement.png" width="1410" height="898" loading="lazy" alt="Tabletop: mean final arrival time versus planning budget, comparing the same four methods.">
 </article></div>
+      <div class="motion-examples" id="benchmark-videos">
+        <h3 class="title is-4 has-text-centered">Benchmark motion examples</h3>
+        <div class="content"><p>Example motions planned with root recycling. The robot is blue and the moving obstacles are red. Each clip plays at <strong>1× speed</strong> and loops.</p></div>
+        <h4 class="title is-5">Disc2D</h4>
+        <div class="motion-grid">
+          <figure class="motion-example">
+            <video class="project-video" controls muted loop playsinline preload="none" width="480" height="480" poster="static/images/benchmark-disc2d-000.png" aria-label="Disc2D motion example 1, 1 times speed">
+              <source src="static/videos/benchmark-disc2d-000.mp4" type="video/mp4">
+              <a href="static/videos/benchmark-disc2d-000.mp4">Download Disc2D motion example 1</a>.
+            </video>
+            <figcaption>Example 1</figcaption>
+          </figure>
+          <figure class="motion-example">
+            <video class="project-video" controls muted loop playsinline preload="none" width="480" height="480" poster="static/images/benchmark-disc2d-001.png" aria-label="Disc2D motion example 2, 1 times speed">
+              <source src="static/videos/benchmark-disc2d-001.mp4" type="video/mp4">
+              <a href="static/videos/benchmark-disc2d-001.mp4">Download Disc2D motion example 2</a>.
+            </video>
+            <figcaption>Example 2</figcaption>
+          </figure>
+          <figure class="motion-example">
+            <video class="project-video" controls muted loop playsinline preload="none" width="480" height="480" poster="static/images/benchmark-disc2d-002.png" aria-label="Disc2D motion example 3, 1 times speed">
+              <source src="static/videos/benchmark-disc2d-002.mp4" type="video/mp4">
+              <a href="static/videos/benchmark-disc2d-002.mp4">Download Disc2D motion example 3</a>.
+            </video>
+            <figcaption>Example 3</figcaption>
+          </figure>
+        </div>
+        <h4 class="title is-5">Panda-spheres</h4>
+        <div class="motion-grid">
+          <figure class="motion-example">
+            <video class="project-video" controls muted loop playsinline preload="none" width="480" height="480" poster="static/images/benchmark-panda-spheres-000.png" aria-label="Panda-spheres motion example 1, 1 times speed">
+              <source src="static/videos/benchmark-panda-spheres-000.mp4" type="video/mp4">
+              <a href="static/videos/benchmark-panda-spheres-000.mp4">Download Panda-spheres motion example 1</a>.
+            </video>
+            <figcaption>Example 1</figcaption>
+          </figure>
+          <figure class="motion-example">
+            <video class="project-video" controls muted loop playsinline preload="none" width="480" height="480" poster="static/images/benchmark-panda-spheres-001.png" aria-label="Panda-spheres motion example 2, 1 times speed">
+              <source src="static/videos/benchmark-panda-spheres-001.mp4" type="video/mp4">
+              <a href="static/videos/benchmark-panda-spheres-001.mp4">Download Panda-spheres motion example 2</a>.
+            </video>
+            <figcaption>Example 2</figcaption>
+          </figure>
+          <figure class="motion-example">
+            <video class="project-video" controls muted loop playsinline preload="none" width="480" height="480" poster="static/images/benchmark-panda-spheres-002.png" aria-label="Panda-spheres motion example 3, 1 times speed">
+              <source src="static/videos/benchmark-panda-spheres-002.mp4" type="video/mp4">
+              <a href="static/videos/benchmark-panda-spheres-002.mp4">Download Panda-spheres motion example 3</a>.
+            </video>
+            <figcaption>Example 3</figcaption>
+          </figure>
+        </div>
+      </div>
     </div>
   </section>
 
