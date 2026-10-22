@@ -18,6 +18,11 @@
 .benchmark img { display:block; width:100%; height:auto; }
 .benchmark .scene { aspect-ratio:1; object-fit:contain; margin-bottom:1rem; border-radius:12px; }
 .benchmark .plot { margin:.75rem 0 1.5rem; }
+.motion-examples { margin-top:3rem; padding-top:2rem; border-top:1px solid var(--border-color); }
+.motion-examples h4 { margin:2rem 0 1rem; }
+.motion-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1.25rem; }
+.motion-example { min-width:0; margin:0; }
+.motion-example figcaption { margin-top:.5rem; text-align:center; color:var(--text-secondary); }
 .method-legend { display:flex; flex-wrap:wrap; justify-content:center; gap:.65rem 1.5rem; list-style:none; padding:0; margin:1.5rem 0; }
 .method-legend li { display:flex; align-items:center; gap:.5rem; }
 .legend-line { width:2rem; display:inline-block; border-top:3px solid #222; }
@@ -41,6 +46,7 @@ a:focus-visible, summary:focus-visible, video:focus-visible { outline:3px solid 
   .publication-title { font-size:1.9rem !important; line-height:1.2 !important; }
   .section { padding:2rem 1rem; }
   .benchmark-grid { grid-template-columns:1fr; gap:2rem; }
+  .motion-grid { grid-template-columns:1fr; gap:1.5rem; max-width:480px; margin:0 auto; }
   .benchmark .scene { max-width:340px; margin-left:auto; margin-right:auto; }
   .project-figure { margin:1rem 0; }
   .share-project { flex-direction:column; }
@@ -48,6 +54,5 @@ a:focus-visible, summary:focus-visible, video:focus-visible { outline:3px solid 
 }
 @media (max-width:480px) {
   .publication-links .button { width:calc(50% - .4rem); margin:0 !important; padding:.65rem .5rem !important; font-size:.875rem !important; }
-  .publication-links .button:last-child { width:100%; }
 }
 @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } * { transition:none !important; animation:none !important; } }
