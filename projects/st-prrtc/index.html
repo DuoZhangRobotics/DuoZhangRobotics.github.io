@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ST-pRRTC: Parallel Space-Time RRT-C with Adaptive Goal-Time Forests</title>
+  <meta name="description" content="ST-pRRTC research project: GPU-parallel motion planning among moving obstacles, with paper, narrated video, benchmarks, and real-robot demonstrations.">
+  <meta name="author" content="Duo Zhang, Jintong Li, Junshan Huang, Jingjin Yu">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#2563eb">
+  <link rel="canonical" href="https://duozhangrobotics.github.io/projects/st-prrtc/">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Duo Zhang Robotics">
+  <meta property="og:title" content="ST-pRRTC: Parallel Space-Time RRT-C with Adaptive Goal-Time Forests">
+  <meta property="og:description" content="GPU-parallel planning with adaptive goal-time forests. Watch the narrated overview and UR5e demonstrations among moving drones.">
+  <meta property="og:url" content="https://duozhangrobotics.github.io/projects/st-prrtc/">
+  <meta property="og:image" content="https://duozhangrobotics.github.io/projects/st-prrtc/static/images/five-drones-portal-poking.jpg">
+  <meta property="og:image:alt" content="ST-pRRTC portal-poking demonstration in simulation and two real camera views">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="ST-pRRTC: Parallel Space-Time RRT-C with Adaptive Goal-Time Forests">
+  <meta name="twitter:description" content="Paper, video, benchmarks, and real-robot demonstrations of ST-pRRTC.">
+  <meta name="twitter:image" content="https://duozhangrobotics.github.io/projects/st-prrtc/static/images/five-drones-portal-poking.jpg">
+  <meta name="citation_title" content="ST-pRRTC: Parallel Space-Time RRT-C with Adaptive Goal-Time Forests">
+  <meta name="citation_author" content="Zhang, Duo">
+  <meta name="citation_author" content="Li, Jintong">
+  <meta name="citation_author" content="Huang, Junshan">
+  <meta name="citation_author" content="Yu, Jingjin">
+  <meta name="citation_publication_date" content="2026/09/24">
+  <meta name="citation_pdf_url" content="https://arxiv.org/pdf/2609.30533">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+  <link rel="stylesheet" href="static/css/project.css">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ScholarlyArticle", "headline": "ST-pRRTC: Parallel Space-Time RRT-C with Adaptive Goal-Time Forests", "author": [{"@type": "Person", "name": "Duo Zhang"}, {"@type": "Person", "name": "Jintong Li"}, {"@type": "Person", "name": "Junshan Huang"}, {"@type": "Person", "name": "Jingjin Yu"}], "datePublished": "2026-09-24", "url": "https://duozhangrobotics.github.io/projects/st-prrtc/", "sameAs": "https://arxiv.org/abs/2609.30533", "description": "GPU-parallel space-time RRT-Connect with continuous goal-time sampling and root recycling for motion planning among known moving obstacles."}</script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to content</a>
+<main id="main-content">
+  <section class="hero">
+    <div class="hero-body"><div class="container is-max-desktop has-text-centered">
+      <h1 class="title is-1 publication-title">ST-pRRTC: Parallel Space-Time RRT-C<br>with Adaptive Goal-Time Forests</h1>
+      <div class="is-size-5 publication-authors">
+        <a href="https://duozhangrobotics.github.io/">Duo Zhang</a>, Jintong Li, Junshan Huang, <a href="https://arc-l.github.io/group.html">Jingjin Yu</a>
+      </div>
+      <p class="publication-authors">Department of Computer Science, Rutgers University</p>
+      <p>arXiv preprint, 2026</p>
+      <div class="publication-links">
+        <a class="button is-dark is-rounded" href="https://arxiv.org/abs/2609.30533">Paper (arXiv)</a>
+        <a class="button is-dark is-rounded" href="https://arxiv.org/pdf/2609.30533">Paper PDF</a>
+        <a class="button is-dark is-rounded" href="#video">Video</a>
+        <a class="button is-dark is-rounded" href="#demos">Real-robot demos</a>
+        <a class="button is-dark is-rounded" href="static/files/ST_pRRTC_poster.pptx" download>Poster (PowerPoint)</a>
+      </div>
+      <p class="project-status">Code is not yet released.</p>
+      <nav class="project-nav" aria-label="Project sections"><a href="#method">Method</a><a href="#benchmarks">Benchmarks</a><a href="#citation">Citation</a></nav>
+    </div></div>
+  </section>
+
+  <section class="section project-section" id="video">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Paper video</h2>
+      <figure class="project-figure">
+        <video class="project-video" controls playsinline preload="metadata" width="1920" height="1080" poster="static/images/st-prrtc-overview.jpg" aria-label="Narrated ST-pRRTC overview with algorithm explanations, benchmark results, and real-robot demonstrations">
+          <source src="static/videos/st-prrtc-overview.mp4" type="video/mp4">
+          <a href="static/videos/st-prrtc-overview.mp4">Download the narrated overview</a>.
+        </video>
+        <figcaption>An overview of the method, benchmark results, and real-robot demonstrations.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section hero is-light project-section" id="abstract">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Abstract</h2>
+      <div class="content"><p>ST-pRRTC is a GPU-parallel space-time RRT-Connect planner for known obstacle trajectories and an unspecified arrival time. It grows a shared forward tree and a backward forest rooted at candidate goal-arrival times. Searching more arrival times broadens coverage but divides a finite planning budget among more trees. We study two ways to allocate that search effort: interval root samples goal times continuously, while root recycling reuses a bounded set of tree slots after finding an earlier solution. Interval root has probabilistic completeness and asymptotic arrival-time optimality for robust solutions in a bounded horizon. Root recycling is a practical policy without those general guarantees. Across three dynamic benchmarks, both variants achieve lower mean first-solution compute times and earlier mean final arrivals than ST-RRT* and SI-RRT on cases solved by all compared methods. A UR5e executing plans among moving Crazyflie drones demonstrates the approach on hardware.</p></div>
+    </div>
+  </section>
+
+  <section class="section project-section" id="method">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">ST-pRRTC: interval root and root recycling</h2>
+      <div class="content"><p>A backward tree needs both a goal configuration and a goal-arrival time. GPU workers expand a shared forward tree and the backward forest in parallel, checking edges against moving obstacles at their corresponding times.</p></div>
+      <article class="method-block">
+        <h3 class="title is-4">Interval root</h3>
+        <div class="content"><p>Uniform sampling preserves coverage of candidate arrival times. Goal collision checks suggest guided sampling windows, and the planner collision-checks every sampled root. An earlier solution lowers the arrival bound while preserving useful search trees.</p></div>
+        <figure class="project-figure"><img src="static/images/interval-root.png" width="2800" height="706" loading="lazy" alt="Interval-root sampling before and after a better arrival bound: uniform intervals and guided windows shrink while retained roots keep their times."><figcaption>Uniform intervals provide coverage. Guided windows favor promising times. Earlier solutions reduce the active time range.</figcaption></figure>
+        <div class="content"><p><strong>Guarantees:</strong> for a single goal in a bounded horizon, interval root is probabilistically complete for positive-clearance solutions and asymptotically optimal in arrival time when robust solutions approach the optimum. The analysis assumes unlimited sampling and storage, fair worker scheduling, and sound local collision validation that accepts sufficiently short collision-free motions.</p></div>
+      </article>
+      <article class="method-block">
+        <h3 class="title is-4">Root recycling</h3>
+        <div class="content"><p>Root recycling uses a fixed set of backward-tree slots. After an earlier solution, it replaces later roots with new, empty roots at earlier times and retains the shared forward tree and useful earlier backward trees. Recycled roots do not inherit the old tree's nodes. This policy focuses finite search effort on useful arrival times and does not inherit interval root's general completeness or optimality guarantees.</p></div>
+        <figure class="project-figure"><img src="static/images/root-recycling.png" width="2800" height="794" loading="lazy" alt="Root recycling: grow candidate goal-time trees, find an earlier solution, and reuse late slots for empty roots at earlier times."></figure>
+      </article>
+    </div>
+  </section>
+
+  <section class="section hero is-light project-section" id="benchmarks">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Benchmarks</h2>
+      <div class="content"><p>We compare root recycling and interval root with ST-RRT* and SI-RRT on Disc2D, a Panda arm among moving spheres, and UR5e tabletop transitions. In the tabletop benchmark, one arm plans against the prescribed motion of the other. Blue denotes the planned robot and red the moving obstacles. Translucent arms show goal configurations. The tabletop serves as visual context.</p>
+      <p>Top plots show cumulative first-solution success over all cases, averaged across planning budgets of 0.5, 1, 3, and 5 seconds. Their shading spans the minimum and maximum across budgets. Bottom plots show mean final arrival and 95% bootstrap intervals on cases solved by all four methods at each budget.</p>
+      <p>Compute time measures GPU-kernel execution for ST-pRRTC and CPU planning calls for the baselines, excluding scene construction and upload. Experiments use an RTX 4090 and an Intel Core i9-14900KF, with single-threaded CPU baselines.</p></div>
+      <ul class="method-legend" aria-label="Plot legend"><li><span class="legend-line" aria-hidden="true"></span>Root recycling</li><li><span class="legend-line interval" aria-hidden="true"></span>Interval root</li><li><span class="legend-line strrt" aria-hidden="true"></span>ST-RRT*</li><li><span class="legend-line sirrt" aria-hidden="true"></span>SI-RRT</li></ul>
+      <div class="benchmark-grid"><article class="benchmark">
+  <h3>Disc2D</h3><p class="case-count">300 cases</p>
+  <img class="scene" src="static/images/scene-disc2d.png" width="900" height="900" loading="lazy" alt="Representative Disc2D scene: the planned robot is blue and moving obstacles are red.">
+  <img class="plot" src="static/images/success-disc2d.png" width="1410" height="948" loading="lazy" alt="Disc2D: percentage of solved problems versus first-solution compute time for root recycling, interval root, ST-RRT star, and SI-RRT.">
+  <img class="plot" src="static/images/arrival-disc2d.png" width="1410" height="898" loading="lazy" alt="Disc2D: mean final arrival time versus planning budget, comparing the same four methods.">
+</article>
+<article class="benchmark">
+  <h3>Panda-spheres</h3><p class="case-count">300 cases</p>
+  <img class="scene" src="static/images/scene-panda.png" width="900" height="900" loading="lazy" alt="Representative Panda-spheres scene: the planned robot is blue and moving obstacles are red.">
+  <img class="plot" src="static/images/success-panda-spheres.png" width="1410" height="948" loading="lazy" alt="Panda-spheres: percentage of solved problems versus first-solution compute time for root recycling, interval root, ST-RRT star, and SI-RRT.">
+  <img class="plot" src="static/images/arrival-panda-spheres.png" width="1410" height="898" loading="lazy" alt="Panda-spheres: mean final arrival time versus planning budget, comparing the same four methods.">
+</article>
+<article class="benchmark">
+  <h3>Tabletop</h3><p class="case-count">962 cases</p>
+  <img class="scene" src="static/images/scene-tabletop.png" width="900" height="900" loading="lazy" alt="Representative Tabletop scene: the planned robot is blue and moving obstacles are red.">
+  <img class="plot" src="static/images/success-tabletop-rearrangement.png" width="1410" height="948" loading="lazy" alt="Tabletop: percentage of solved problems versus first-solution compute time for root recycling, interval root, ST-RRT star, and SI-RRT.">
+  <img class="plot" src="static/images/arrival-tabletop-rearrangement.png" width="1410" height="898" loading="lazy" alt="Tabletop: mean final arrival time versus planning budget, comparing the same four methods.">
+</article></div>
+    </div>
+  </section>
+
+  <section class="section project-section" id="demos">
+    <div class="container is-max-desktop">
+      <h2 class="title is-3 has-text-centered">Real-robot demonstrations</h2>
+      <div class="content"><p>A UR5e executes planned reaches among Crazyflie drones following known trajectories. A synchronized trigger starts the preplanned robot and drone motions. These demonstrations do not use online replanning.</p><p>Each clip pairs simulation with aligned front and side camera views at <strong>2.5× playback speed</strong>.</p></div>
+      <article class="demo">
+  <h3 class="title is-4">Left/right reaching with three slow drones</h3><p>The gripper alternates between targets on its left and right while three drones move through the workspace.</p>
+  <figure class="project-figure">
+    <video class="project-video" controls muted loop playsinline preload="none" width="1920" height="800" poster="static/images/three-drones-slow.jpg" aria-label="Left/right reaching with three slow drones, simulation, front camera, and side camera at 2.5 times speed">
+      <source src="static/videos/three-drones-slow.mp4" type="video/mp4">
+      <a href="static/videos/three-drones-slow.mp4">Download this demonstration</a>.
+    </video>
+  </figure>
+</article>
+<article class="demo">
+  <h3 class="title is-4">Left/right reaching with three fast drones</h3><p>The same reaching task uses faster drone motion, requiring different timing to avoid collisions.</p>
+  <figure class="project-figure">
+    <video class="project-video" controls muted loop playsinline preload="none" width="1920" height="800" poster="static/images/three-drones-fast.jpg" aria-label="Left/right reaching with three fast drones, simulation, front camera, and side camera at 2.5 times speed">
+      <source src="static/videos/three-drones-fast.mp4" type="video/mp4">
+      <a href="static/videos/three-drones-fast.mp4">Download this demonstration</a>.
+    </video>
+  </figure>
+</article>
+<article class="demo">
+  <h3 class="title is-4">Top/center/bottom reaching with two drones</h3><p>The gripper reaches the top, center, and bottom of a vertical opening while two drones circulate around it.</p>
+  <figure class="project-figure">
+    <video class="project-video" controls muted loop playsinline preload="none" width="1920" height="800" poster="static/images/two-drones-reaching.jpg" aria-label="Top/center/bottom reaching with two drones, simulation, front camera, and side camera at 2.5 times speed">
+      <source src="static/videos/two-drones-reaching.mp4" type="video/mp4">
+      <a href="static/videos/two-drones-reaching.mp4">Download this demonstration</a>.
+    </video>
+  </figure>
+</article>
+<article class="demo">
+  <h3 class="title is-4">Portal poking with five drones</h3><p>The gripper extends and retracts through gaps between five moving drones.</p>
+  <figure class="project-figure">
+    <video class="project-video" controls muted loop playsinline preload="none" width="1920" height="800" poster="static/images/five-drones-portal-poking.jpg" aria-label="Portal poking with five drones, simulation, front camera, and side camera at 2.5 times speed">
+      <source src="static/videos/five-drones-portal-poking.mp4" type="video/mp4">
+      <a href="static/videos/five-drones-portal-poking.mp4">Download this demonstration</a>.
+    </video>
+  </figure>
+</article>
+    </div>
+  </section>
+
+  <section class="section hero is-light project-section" id="citation">
+    <div class="container is-max-desktop content">
+      <h2 class="title is-3 has-text-centered">Citation</h2>
+<pre><code>@article{zhang2026stprrtc,
+  title   = {{ST-pRRTC}: Parallel Space-Time {RRT-C} with Adaptive Goal-Time Forests},
+  author  = {Zhang, Duo and Li, Jintong and Huang, Junshan and Yu, Jingjin},
+  journal = {arXiv preprint arXiv:2609.30533},
+  year    = {2026},
+  url     = {https://arxiv.org/abs/2609.30533}
+}</code></pre>
+    </div>
+  </section>
+</main>
+<footer class="footer">
+  <div class="container content">
+    <div class="share-project"><a href="static/images/st-prrtc-qr.png" download aria-label="Download the ST-pRRTC project QR code"><img src="static/images/st-prrtc-qr.png" width="140" height="140" loading="lazy" alt="QR code linking to the ST-pRRTC project page"></a><p><strong>Share this project</strong><br><a href="https://duozhangrobotics.github.io/projects/st-prrtc/">duozhangrobotics.github.io/projects/st-prrtc/</a><br><a href="static/images/st-prrtc-qr.png" download>Download QR code</a></p></div>
+    <p><a href="https://duozhangrobotics.github.io/">Duo Zhang's homepage</a> · <a href="https://arc-l.github.io/">Algorithmic Robotics &amp; Control Lab</a></p>
+    <p>Page design adapted from the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template">Academic Project Page Template</a> and <a href="https://nerfies.github.io/">Nerfies</a>. Template license: <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a>.</p>
+  </div>
+</footer>
+</body>
+</html>
