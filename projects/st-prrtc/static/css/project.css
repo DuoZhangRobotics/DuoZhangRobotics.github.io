@@ -1,6 +1,5 @@
 .project-nav { display:flex; flex-wrap:wrap; justify-content:center; gap:.7rem 1.5rem; margin:1.5rem 0 0; }
 .project-nav a { font-weight:600; }
-.project-status { margin-top:1rem; color:var(--text-secondary); }
 .hero-body { padding:3rem 1.5rem 2rem; }
 .publication-authors { margin-bottom:.75rem; }
 .publication-links { display:flex; flex-wrap:wrap; justify-content:center; gap:.65rem; margin-top:1.5rem; }
@@ -20,6 +19,7 @@
 .benchmark .plot { margin:.75rem 0 1.5rem; }
 .motion-examples { margin-top:3rem; padding-top:2rem; border-top:1px solid var(--border-color); }
 .motion-examples h4 { margin:2rem 0 1rem; }
+.motion-context { margin-bottom:1rem; }
 .motion-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:1.25rem; }
 .motion-example { min-width:0; margin:0; }
 .motion-example figcaption { margin-top:.5rem; text-align:center; color:var(--text-secondary); }
@@ -53,6 +53,6 @@ a:focus-visible, summary:focus-visible, video:focus-visible { outline:3px solid 
   .publication-links .button { font-size:.9rem; }
 }
 @media (max-width:480px) {
-  .publication-links .button { width:calc(50% - .4rem); margin:0 !important; padding:.65rem .5rem !important; font-size:.875rem !important; }
+  .publication-links .button { flex:1; min-width:0; margin:0 !important; padding:.65rem .5rem !important; font-size:.875rem !important; }
 }
 @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } * { transition:none !important; animation:none !important; } }
